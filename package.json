@@ -1,0 +1,12 @@
+{
+  "name": "internships-web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "daisyui": "^5.0.37",
+    "flowbite": "^3.1.2",
+    "tailwindcss": "^4.1.7",
+    "tailwindcss-bg-patterns": "^0.3.0"
+  }
+}

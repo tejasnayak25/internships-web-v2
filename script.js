@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById(page).classList.remove("hidden");
 
     if(page === "research" || page === "publications" || page === "internships") {
-        document.getElementById("search").onchange = function() {
-            const searchTerm = this.value.toLowerCase();
+        let search = document.querySelector(`#${page} #search`);
+        search.onchange = () => {
+            const searchTerm = search.value.toLowerCase();
             const items = document.querySelectorAll(`#${page} #list .item`);
-            console.log(items)
             items.forEach(item => {
                 const title = item.querySelector('.title').textContent.toLowerCase();
                 const description = item.querySelector('.description').textContent.toLowerCase();
@@ -24,8 +24,23 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        document.getElementById("search-btn").onclick = function() {
-            document.getElementById("search").dispatchEvent(new Event('change'));
+        document.querySelector(`#${page} #search-btn`).onclick = () => {
+            search.dispatchEvent(new Event('change'));
+        }
+    }
+
+    if(page === "about") {
+        let readMoreBtn = document.getElementById("read-more-about");
+        let aboutContent = document.getElementById("about-content");
+
+        readMoreBtn.onclick = () => {
+            if(readMoreBtn.innerText === "Read More...") {
+                readMoreBtn.innerText = "Read Less...";
+                aboutContent.classList.remove("max-h-52");
+            } else {
+                readMoreBtn.innerText = "Read More...";
+                aboutContent.classList.add("max-h-52");
+            }
         }
     }
 });

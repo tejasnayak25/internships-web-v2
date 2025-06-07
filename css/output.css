@@ -2747,9 +2747,6 @@
   .mb-8 {
     margin-bottom: calc(var(--spacing) * 8);
   }
-  .mb-10 {
-    margin-bottom: calc(var(--spacing) * 10);
-  }
   .mb-14 {
     margin-bottom: calc(var(--spacing) * 14);
   }
@@ -3158,9 +3155,6 @@
     .datatable-wrapper & .datatable-input:focus {
       border-color: var(--color-blue-600);
     }
-  }
-  .min-w-0 {
-    min-width: calc(var(--spacing) * 0);
   }
   .flex-1 {
     flex: 1;
@@ -3747,6 +3741,9 @@
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
   }
+  .py-10 {
+    padding-block: calc(var(--spacing) * 10);
+  }
   .py-20 {
     padding-block: calc(var(--spacing) * 20);
   }
@@ -4294,11 +4291,6 @@
   .md\:w-auto {
     @media (width >= 48rem) {
       width: auto;
-    }
-  }
-  .md\:min-w-52 {
-    @media (width >= 48rem) {
-      min-width: calc(var(--spacing) * 52);
     }
   }
   .md\:grid-cols-2 {

@@ -44,8 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // const mediumUsername = "surajitdbact";
-    const mediumUsername = "abhayparashar31";
+    const mediumUsername = "surajitdbact";
 
     if(page === "home") {
         twttr.widgets.createTimeline(

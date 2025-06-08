@@ -52,8 +52,8 @@
                     <h3 class="text-xl font-bold">Publications</h3>
                     <a href="./?page=publications" class="hover:underline">View All →</a>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                    <div class="max-w-md mx-auto bg-white border border-slate-800 shadow-lg rounded-2xl overflow-hidden hover:shadow-xl shadow-slate-300 transition-shadow duration-300">
+                <div id="pubs" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                    <!-- <div class="max-w-md mx-auto bg-white border border-slate-800 shadow-lg rounded-2xl overflow-hidden hover:shadow-xl shadow-slate-300 transition-shadow duration-300">
                         <div class="p-5">
                             <h3 class="text-xl font-semibold text-gray-800 mb-1">Editor’s Choice Award: Deep Learning for Hydro-Meteorological Prediction</h3>
                             <p class="text-sm text-gray-500 mb-3">Water Journal · March 2024</p>
@@ -67,35 +67,14 @@
                             </a>
                             <span class="italic">Co-authored with Dr. X</span>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="flex justify-between items-center mb-6 rounded-2xl py-3 px-5">
                     <h3 class="text-xl font-bold">Internships</h3>
                     <a href="./?page=internships" class=" hover:underline">View All →</a>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                    <div class="item max-w-md mx-auto bg-white border border-slate-800 shadow-lg rounded-2xl overflow-hidden shadow-slate-300 hover:shadow-xl transition-shadow duration-300 flex flex-col">
-                        <div class="p-5 grow">
-                            <h3 class="title text-xl font-semibold text-gray-800 mb-1">Internship Opportunity: Hydrological Modeling & ML</h3>
-                            <p class="text-sm text-gray-500 mb-3">Applications Open · Summer 2025</p>
-                            <p class="description text-gray-700 text-base mb-4">
-                            Join our research group for a hands-on internship focusing on hydro-meteorological data analysis, time series forecasting, and machine learning applications. Ideal for students passionate about environmental modeling and data science.
-                            </p>
-                            <span class="italic pt-1 rounded-full text-sm flex gap-2 text-slate-800">
-                                <svg class="w-5 h-5 text-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10 4C10 7.31371 7.31371 10 4 10C7.31371 10 10 12.6863 10 16C10 12.6863 12.6863 10 16 10C12.6863 10 10 7.31371 10 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M17.5 15C17.5 16.3807 16.3807 17.5 15 17.5C16.3807 17.5 17.5 18.6193 17.5 20C17.5 18.6193 18.6193 17.5 20 17.5C18.6193 17.5 17.5 16.3807 17.5 15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                Mentorship & Certification Provided
-                            </span>
-                        </div>
-                        <div class="bg-gray-100 px-5 py-3 flex justify-between items-center text-sm text-gray-600">
-                            <a href="mailto:your@email.com" class="text-blue-600 hover:underline">
-                            Apply Now →
-                            </a>
-                        </div>
-                    </div>
+                <div id="ints" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
                 </div>
             </div>
         </section>
@@ -104,7 +83,7 @@
                 <h3 class="text-xl font-bold">Latest Tweets</h3>
                 <a href="https://x.com/surajitdb" class=" hover:underline">View All →</a>
             </div>
-            <a class="twitter-timeline link w-full text-center mx-auto text-base text-blue-500" href="https://twitter.com/surajitdb">Tweets by surajitdb</a>
+            <div id="x-timeline"></div>
         </div>
     </section>
 
@@ -170,7 +149,7 @@
                 </tbody>
             </table>
             <div class="mt-10 text-center flex justify-center items-center">
-                <a href="mailto:" class="bg-slate-500 text-white px-6 py-3 rounded-full hover:bg-slate-600 transition duration-300 rounded-mg flex justify-center items-center gap-2 w-fit">
+                <a href="mailto:surajitdbact@gmail.com" class="bg-slate-500 text-white px-6 py-3 rounded-full hover:bg-slate-600 transition duration-300 rounded-mg flex justify-center items-center gap-2 w-fit">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5H4.5a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-.958 1.846l-7.5 5.25a2.25 2.25 0 01-2.584 0l-7.5-5.25A2.25 2.25 0 012.25 6.993V6.75" />
                     </svg>
@@ -179,22 +158,22 @@
             </div>
 
             <div class="flex justify-center items-center gap-5 mt-10 pb-6">
-                <a href="https://www.linkedin.com/in/surajit-deb-barma-0b1a2a1b6/" target="_blank" class="text-white hover:text-slate-200 transition duration-300 bg-slate-500 rounded-full p-3">
+                <a href="" target="_blank" class="text-white hover:text-slate-200 transition duration-300 bg-slate-500 rounded-full p-3">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
                         <path d="M12 0.296C5.372 0.296 0 5.669 0 12.296c0 5.286 3.438 9.773 8.207 11.365.6.11.793-.261.793-.577 0-.285-.01-1.04-.016-2.042-3.338.726-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.753-1.333-1.753-1.09-.745.082-.73.082-.73 1.204.085 1.838 1.236 1.838 1.236 1.07 1.833 2.808 1.304 3.492.997.108-.775.42-1.304.763-1.604-2.665-.304-5.466-1.332-5.466-5.932 0-1.31.468-2.382 1.235-3.222-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.495 11.495 0 0 1 3.003-.404c1.02.005 2.047.138 3.003.404 2.29-1.552 3.296-1.23 3.296-1.23.654 1.653.243 2.873.12 3.176.77.84 1.234 1.912 1.234 3.222 0 4.61-2.805 5.625-5.475 5.921.432.372.816 1.104.816 2.223 0 1.606-.015 2.901-.015 3.293 0 .319.19.694.801.576C20.565 22.065 24 17.578 24 12.296 24 5.669 18.627 0.296 12 0.296z"/>
                     </svg>
                 </a>
-                <a href="" target="_blank" class="text-white hover:text-slate-200 transition duration-300 bg-slate-500 rounded-full p-3">
+                <a href="https://www.linkedin.com/in/surajit-deb-barma-4b1309249/" target="_blank" class="text-white hover:text-slate-200 transition duration-300 bg-slate-500 rounded-full p-3">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
                         <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.4h.05c.53-1 1.82-2.05 3.75-2.05 4 0 4.74 2.6 4.74 5.98V24h-4V15.05c0-2.13-.04-4.86-2.96-4.86-2.96 0-3.42 2.3-3.42 4.7V24h-4V8z"/>
                     </svg>
                 </a>
-                <a href="" target="_blank" class="text-white hover:text-slate-200 transition duration-300 bg-slate-500 rounded-full p-3">
+                <a href="https://medium.com/@surajitdb" target="_blank" class="text-white hover:text-slate-200 transition duration-300 bg-slate-500 rounded-full p-3">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
                         <path d="M2.01 6.68a.72.72 0 0 0-.24-.6L.1 4.11V3.75h6.44l4.97 10.88L16.66 3.75h6.02v.36l-1.74 1.65a.45.45 0 0 0-.17.43v12.84a.45.45 0 0 0 .17.43l1.7 1.65v.36h-8.58v-.36l1.76-1.71c.17-.17.17-.22.17-.43V8.58l-4.9 12.61h-.66L4.57 8.58v8.9c-.05.31.06.62.3.83l2.28 2.75v.36H.03v-.36l2.28-2.75c.23-.21.33-.52.27-.83V6.68z"/>
                     </svg>
                 </a>
-                <a href="" target="_blank" class="text-white hover:text-slate-200 transition duration-300 bg-slate-500 rounded-full p-3">
+                <a href="https://scholar.google.com/citations?user=F-X8XHkAAAAJ&hl=en&oi=ao" target="_blank" class="text-white hover:text-slate-200 transition duration-300 bg-slate-500 rounded-full p-3">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" fill="currentColor" class="w-6 h-6">
                         <path d="M240.4 0C152 0 88.7 53.9 88.7 128c0 27.6 10.3 53.3 27.7 74-29.4 23.2-46.5 58.4-46.5 95.5 0 64.6 53.7 117.1 119.9 117.1 42.1 0 79.3-21 101.8-53.3 8.5 1.8 17.5 2.8 26.7 2.8 70.4 0 127.7-56.6 127.7-126.2S388.7 112 318.3 112c-25.7 0-49.6 7.2-69.3 19.5C228.8 83.5 191.3 48 148 48c-25.3 0-49.3 7.9-69.5 21.2C48.7 36.7 142.3 0 240.4 0zm77.9 160c39.3 0 71.3 32 71.3 71.3s-32 71.3-71.3 71.3c-11.9 0-23.2-3-33.2-8.2-1.4-.7-2.6-1.5-3.8-2.4-3.2-2.3-6.2-4.8-9-7.6-2.8-2.8-5.3-5.8-7.6-9-.9-1.2-1.7-2.5-2.4-3.8-5.2-10-8.2-21.3-8.2-33.2 0-39.3 32-71.3 71.3-71.3zM171.3 352c-39.3 0-71.3-32-71.3-71.3s32-71.3 71.3-71.3 71.3 32 71.3 71.3-32 71.3-71.3 71.3z"/>
                     </svg>
@@ -267,7 +246,7 @@
     </section>
 
     <section class=" pt-20 h-fit relative hidden" id="publications">
-        <div class="container mx-auto md:pt-10 pt-0 md:px-0 px-5">
+        <div class="container mx-auto md:pt-10 pt-0 md:px-0 px-5 flex flex-col items-center min-h-96">
             <div class="flex items-center w-full mb-6 p-1 px-3 rounded-xl border border-slate-800 focus-within:ring-2 focus-within:ring-slate-500 bg-transparent hover:bg-transparent transition">
                 <svg id="search-btn" class="w-6 h-6 cursor-pointer text-slate-500 active:scale-85 transition-all" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17 17L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -281,37 +260,11 @@
                 />
             </div>
 
+            <div id="nothing" class="flex-1 w-full flex items-center justify-center">
+                <p class="text-gray-500 text-center">Nothing here!</p>
+            </div>
+
             <div id="list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                <div class="item max-w-md mx-auto bg-white border border-slate-800 shadow-lg rounded-2xl overflow-hidden hover:shadow-xl shadow-slate-300 transition-shadow duration-300">
-                    <div class="p-5">
-                        <h3 class="title text-xl font-semibold text-gray-800 mb-1">Editor’s Choice Award: Deep Learning for Hydro-Meteorological Prediction</h3>
-                        <p class="text-sm text-gray-500 mb-3">Water Journal · March 2024</p>
-                        <p class="description text-gray-700 text-base mb-4">
-                        Our collaborative research explores the use of deep learning in predicting complex time-series of hydro-meteorological variables across multiple regions using gauge and satellite data.
-                        </p>
-                    </div>
-                    <div class="bg-gray-100 px-5 py-3 flex justify-between items-center text-sm text-gray-600">
-                        <a href="https://doi.org/your-paper-link" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
-                        View Paper →
-                        </a>
-                        <span class="italic">Co-authored with Dr. X</span>
-                    </div>
-                </div>
-                <div class="item max-w-md mx-auto bg-white border border-slate-800 shadow-lg rounded-2xl overflow-hidden hover:shadow-xl shadow-slate-300 transition-shadow duration-300">
-                    <div class="p-5">
-                        <h3 class="title text-xl font-semibold text-gray-800 mb-1">Editor’s Choice Award: Deep Learning for Hydro-Meteorological Detection</h3>
-                        <p class="text-sm text-gray-500 mb-3">Water Journal · March 2024</p>
-                        <p class="description text-gray-700 text-base mb-4">
-                        Our collaborative research explores the use of deep learning in predicting complex time-series of hydro-meteorological variables across multiple regions using gauge and satellite data.
-                        </p>
-                    </div>
-                    <div class="bg-gray-100 px-5 py-3 flex justify-between items-center text-sm text-gray-600">
-                        <a href="https://doi.org/your-paper-link" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
-                        View Paper →
-                        </a>
-                        <span class="italic">Co-authored with Dr. X</span>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -328,7 +281,7 @@
     </section>
 
     <section class=" pt-20 h-fit relative hidden" id="internships">
-        <div class="container mx-auto md:pt-10 pt-0 md:px-0 px-5">
+        <div class="container mx-auto md:pt-10 pt-0 md:px-0 px-5 flex flex-col items-center min-h-96">
             <div class="flex items-center w-full mb-6 p-1 px-3 rounded-xl border border-slate-800 focus-within:ring-2 focus-within:ring-slate-500 bg-transparent hover:bg-transparent transition">
                 <svg id="search-btn" class="w-6 h-6 cursor-pointer text-slate-500 active:scale-85 transition-all" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17 17L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -342,49 +295,11 @@
                 />
             </div>
 
-            <div id="list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                <div class="item max-w-md mx-auto bg-white border border-slate-800 shadow-lg rounded-2xl overflow-hidden shadow-slate-300 hover:shadow-xl transition-shadow duration-300 flex flex-col">
-                    <div class="p-5 grow">
-                        <h3 class="title text-xl font-semibold text-gray-800 mb-1">Internship Opportunity: Hydrological Modeling & ML</h3>
-                        <p class="text-sm text-gray-500 mb-3">Applications Open · Summer 2025</p>
-                        <p class="description text-gray-700 text-base mb-4">
-                        Join our research group for a hands-on internship focusing on hydro-meteorological data analysis, time series forecasting, and machine learning applications. Ideal for students passionate about environmental modeling and data science.
-                        </p>
-                        <span class="italic pt-1 rounded-full text-sm flex gap-2 text-slate-800">
-                            <svg class="w-5 h-5 text-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10 4C10 7.31371 7.31371 10 4 10C7.31371 10 10 12.6863 10 16C10 12.6863 12.6863 10 16 10C12.6863 10 10 7.31371 10 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M17.5 15C17.5 16.3807 16.3807 17.5 15 17.5C16.3807 17.5 17.5 18.6193 17.5 20C17.5 18.6193 18.6193 17.5 20 17.5C18.6193 17.5 17.5 16.3807 17.5 15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            Mentorship & Certification Provided
-                        </span>
-                    </div>
-                    <div class="bg-gray-100 px-5 py-3 flex justify-between items-center text-sm text-gray-600">
-                        <a href="mailto:your@email.com" class="text-blue-600 hover:underline">
-                        Apply Now →
-                        </a>
-                    </div>
-                </div>
-                <div class="item max-w-md mx-auto bg-white border border-slate-800 shadow-lg rounded-2xl overflow-hidden shadow-slate-300 hover:shadow-xl transition-shadow duration-300 flex flex-col">
-                    <div class="p-5 grow">
-                        <h3 class="title text-xl font-semibold text-gray-800 mb-1">Internship Opportunity: Hydrological Modeling & ML</h3>
-                        <p class="text-sm text-gray-500 mb-3">Applications Open · Summer 2025</p>
-                        <p class="description text-gray-700 text-base mb-4">
-                        Join our research group for a hands-on internship focusing on hydro-meteorological data analysis, time series forecasting, and machine learning applications. Ideal for students passionate about environmental modeling and data science.
-                        </p>
-                        <span class="italic pt-1 rounded-full text-sm flex gap-2 text-slate-800">
-                            <svg class="w-5 h-5 text-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10 4C10 7.31371 7.31371 10 4 10C7.31371 10 10 12.6863 10 16C10 12.6863 12.6863 10 16 10C12.6863 10 10 7.31371 10 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M17.5 15C17.5 16.3807 16.3807 17.5 15 17.5C16.3807 17.5 17.5 18.6193 17.5 20C17.5 18.6193 18.6193 17.5 20 17.5C18.6193 17.5 17.5 16.3807 17.5 15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            Mentorship & Certification Provided
-                        </span>
-                    </div>
-                    <div class="bg-gray-100 px-5 py-3 flex justify-between items-center text-sm text-gray-600">
-                        <a href="mailto:your@email.com" class="text-blue-600 hover:underline">
-                        Apply Now →
-                        </a>
-                    </div>
-                </div>
+            <div id="nothing" class="flex-1 w-full flex items-center justify-center">
+                <p class="text-gray-500 text-center">Nothing here!</p>
+            </div>
+
+            <div id="list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6 w-full">
             </div>
         </div>
     </section>
@@ -394,7 +309,8 @@
             &copy; 2024 Surajit Deb Barma. All rights reserved.
         </div>
     </footer>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="./models.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>

@@ -1,0 +1,29 @@
+[
+    {
+        "title": "Summer Internship",
+        "date": "Jan 2025",
+        "description": "We are looking for a passionate and curious Creative Tech Intern to join our team for an exciting internship experience. As an intern, you will work alongside designers, developers, and strategists on real-world projects, contributing ideas, building prototypes, and learning the ins and outs of how a modern creative team operates.",
+        "open": true,
+        "deadline": "30, Dec 2024",
+        "link": "#",
+        "mentorship_certificate": true
+    },
+    {
+        "title": "Monsoon Internship",
+        "date": "Jul 2024",
+        "description": "Join our dev team to build and test web applications, fix bugs, and learn industry-standard tools and practices. Great opportunity to sharpen your coding skills in a real-world environment.",
+        "open": false,
+        "deadline": "31, May 2024",
+        "link": "#",
+        "mentorship_certificate": true
+    },
+    {
+        "title": "Winter Internship",
+        "date": "Dec 2024",
+        "description": "Assist in content creation, social media management, and campaign analysis. Gain hands-on experience with digital marketing tools while working on live campaigns.",
+        "open": false,
+        "deadline": null,
+        "link": "#",
+        "mentorship_certificate": false
+    }
+]

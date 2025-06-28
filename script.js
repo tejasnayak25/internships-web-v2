@@ -1,4 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
+    let toggleMenu = document.getElementById("toggle-menu");
+
+    toggleMenu.onclick = () => {
+        document.querySelector('nav ul').classList.toggle('hidden');
+        document.querySelector('nav ul').classList.toggle('flex');
+
+        if(toggleMenu.querySelector("#open-menu").classList.contains("hidden")) {
+            toggleMenu.querySelector("#open-menu").classList.remove("hidden");
+            toggleMenu.querySelector("#close-menu").classList.add("hidden");
+        } else {
+            toggleMenu.querySelector("#open-menu").classList.add("hidden");
+            toggleMenu.querySelector("#close-menu").classList.remove("hidden");
+        }
+    }
+
     let page = "home";
 
     let url = new URL(window.location.href);

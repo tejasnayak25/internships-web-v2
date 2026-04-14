@@ -1,62 +1,111 @@
 <html lang="en" class="bg-white text-black">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Surajit Deb Barma</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./css/output.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .serif {
+            font-family: 'Lora', serif;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+        }
+    </style>
 </head>
-<body class="relative min-h-full">
-    <nav class=" lg:px-32 md:px-16 px-5 md:py-10 py-5 absolute w-full top-0 z-50">
-        <div class=" mx-auto flex justify-between items-center">
-            <a href="./" class=" text-lg font-semibold">Dr. Surajit Deb Barma</a>
-            <ul class="lg:flex hidden space-x-6 lg:flex-row flex-col lg:relative absolute lg:top-auto md:top-20 top-16 left-0 w-full lg:w-auto bg-white lg:bg-transparent lg:space-x-6 space-y-4 lg:space-y-0 p-4 md:p-8 lg:p-0 px-4 md:px-16 lg:px-0 rounded-b-lg lg:rounded-b-none shadow-md lg:shadow-none lg:text-base text-lg">
-                <li><a href="./" class="text-gray-800 hover:text-black">Home</a></li>
-                <li><a href="./?page=about" class="text-gray-800 hover:text-black">About</a></li>
-                <li><a href="./?page=research" class="text-gray-800 hover:text-black">Research</a></li>
-                <li><a href="./?page=publications" class="text-gray-800 hover:text-black">Publications</a></li>
-                <li><a href="./?page=training" class="text-gray-800 hover:text-black">Training & Consultancy</a></li>
-                <li><a href="./?page=internships" class="text-gray-800 hover:text-black">Internships</a></li>
+
+<body class="relative min-h-full bg-slate-50 text-slate-800">
+    <nav
+        class="glass lg:px-32 md:px-16 px-5 py-4 sticky w-full top-0 z-50 border-b border-slate-200/60 shadow-sm transition-all text-sm md:text-base">
+        <div class="mx-auto flex justify-between items-center max-w-6xl">
+            <a href="./" class="serif text-xl md:text-2xl font-bold text-blue-950 tracking-tight">Dr. Surajit <span class="text-amber-600">Deb Barma</span></a>
+            <ul
+                class="lg:flex hidden lg:flex-row flex-col lg:relative absolute lg:top-auto md:top-20 top-16 left-0 w-full lg:w-auto bg-white/95 backdrop-blur-md lg:bg-transparent space-y-2 lg:space-y-0 p-4 lg:p-0 px-4 md:px-16 lg:px-0 rounded-b-2xl lg:rounded-b-none shadow-xl lg:shadow-none font-medium lg:items-center lg:space-x-1 border-b lg:border-none border-slate-200">
+                <li><a href="./" class="block px-4 py-2 rounded-full text-slate-600 hover:text-amber-600 hover:bg-amber-50/50 transition-all">Home</a></li>
+                <li><a href="./?page=about" class="block px-4 py-2 rounded-full text-slate-600 hover:text-amber-600 hover:bg-amber-50/50 transition-all">About</a></li>
+                <li><a href="./?page=research" class="block px-4 py-2 rounded-full text-slate-600 hover:text-amber-600 hover:bg-amber-50/50 transition-all">Research</a></li>
+                <li><a href="./?page=publications" class="block px-4 py-2 rounded-full text-slate-600 hover:text-amber-600 hover:bg-amber-50/50 transition-all">Publications</a></li>
+                <li><a href="./?page=training" class="block px-4 py-2 rounded-full text-slate-600 hover:text-amber-600 hover:bg-amber-50/50 transition-all">Training & Consultancy</a></li>
+                <li><a href="./?page=internships" class="block px-4 py-2 rounded-full text-slate-600 hover:text-amber-600 hover:bg-amber-50/50 transition-all">Internships</a></li>
             </ul>
-            <button id="toggle-menu" class="lg:hidden text-gray-800 focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" id="open-menu">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            <button id="toggle-menu" class="lg:hidden p-2 rounded-full bg-slate-100 text-slate-800 hover:bg-slate-200 hover:text-amber-600 focus:outline-none transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6" id="open-menu">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 hidden" id="close-menu">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="w-6 h-6 hidden" id="close-menu">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
         </div>
     </nav>
-    <section id="home" class="hidden relative overflow-visible">
-        <section class=" lg:px-32 md:px-16 px-5 py-20 md:pt-32 pt-32 min-h-full max-h-none flex md:justify-start justify-center md:items-center items-start relative overflow-hidden">
-            <div class=" mx-auto flex flex-col md:flex-row items-center">
-                <div class="lg:w-1/2 md:w-2/3 w-full md:pr-10 pr-10">
-                    <h1 class="text-4xl lg:text-5xl font-bold mb-4 text-black">Dr. Surajit Deb Barma</h1>
-                    <p class="text-lg md:text-xl text-gray-700 mb-6">
-                        Teacher and Researcher in process-based and data-driven models
-                    </p>
-                    <p class="text-gray-600 mb-8">
-                        Passionate about leveraging machine learning for hydrological research and mentoring the next generation of scientists.
-                    </p>
-                    <div class="flex md:flex-row flex-col gap-4">
-                        <a href="./?page=about" class="bg-blue-500 text-white md:px-6 py-3 px-5 flex justify-center items-center rounded-full hover:bg-blue-600 transition duration-300">Learn More</a>
-                        <a href="./?page=research" class="bg-transparent border border-blue-500 text-blue-500 md:px-6 py-3 px-5 flex justify-center items-center rounded-full hover:bg-blue-500 hover:text-white transition duration-300">Research Interests</a>
+    <main id="main-content">
+        <section id="home" class="hidden relative overflow-visible">
+            <section
+                class="lg:px-32 md:px-16 px-5 py-20 min-h-full flex justify-center items-center relative overflow-hidden bg-white border-b border-slate-200">
+                <div class="mx-auto flex flex-col md:flex-row items-center max-w-6xl relative z-10">
+                    <div class="lg:w-3/5 md:w-2/3 w-full md:pr-12 text-center md:text-left">
+                        <h1
+                            class="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight text-blue-950 drop-shadow-sm">
+                            Dr. Surajit <span class="text-amber-600">Deb Barma</span></h1>
+                        <p class="text-xl md:text-2xl text-slate-600 mb-6 font-light">
+                            Teacher and Researcher in process-based and data-driven models
+                        </p>
+                        <p class="text-slate-500 mb-8 text-lg leading-relaxed max-w-2xl">
+                            Passionate about leveraging machine learning for hydrological research and mentoring the
+                            next generation of scientists.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                            <a href="./?page=about"
+                                class="bg-blue-950 text-white px-8 py-3 rounded-full hover:bg-blue-900 hover:-translate-y-0.5 hover:shadow-lg transition-all text-center font-medium shadow-md">Learn
+                                More</a>
+                            <a href="./?page=research"
+                                class="bg-amber-100 border border-amber-200 text-amber-800 px-8 py-3 rounded-full hover:bg-amber-200 hover:-translate-y-0.5 transition-all shadow-sm hover:shadow-md text-center font-medium">Research
+                                Interests</a>
+                        </div>
                     </div>
-                </div>
-                <div class="lg:w-1/2 md:w-1/3 w-full mt-10 md:mt-0">
-                    <img src="https://media.licdn.com/dms/image/v2/C4E03AQHZF7MelSHC1Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1660827675070?e=1753920000&v=beta&t=PQHM4SQzlXGSLnTTa4jPaFb_hksfWx7qH8w_N_eMZ5E" alt="Dr. Surajit Deb Barma" class="rounded-full shadow-lg lg:w-64 lg:h-64 md:w-52 md:h-52 w-64 h-64 object-cover mx-auto">
-                </div>
-        </section>
+                    <div class="lg:w-2/5 md:w-1/3 w-full mt-12 md:mt-0 flex justify-center md:justify-end relative">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-blue-900 to-amber-400 rounded-full blur-3xl opacity-20 -z-10 mix-blend-multiply w-80 h-80 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden md:block">
+                        </div>
+                        <img src="https://media.licdn.com/dms/image/v2/C4E03AQHZF7MelSHC1Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1660827675070?e=1753920000&v=beta&t=PQHM4SQzlXGSLnTTa4jPaFb_hksfWx7qH8w_N_eMZ5E"
+                            alt="Dr. Surajit Deb Barma"
+                            class="rounded-[2rem] object-cover w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 shadow-2xl ring-4 ring-white relative z-10 transition-transform duration-500 hover:scale-[1.02]">
+                    </div>
+            </section>
 
-        <section class="lg:px-32 md:px-16 px-5 pt-20 h-fit relative">
-            <div class=" mx-auto pt-20">
-                <h2 class="text-3xl font-bold mb-6 text-center">Recent Highlights</h2>
-                <div class="flex justify-between items-center mb-6 rounded-2xl py-3 px-5">
-                    <h3 class="text-xl font-bold">Publications</h3>
-                    <a href="./?page=publications" class="hover:underline">View All →</a>
-                </div>
-                <div id="pubs" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                    <!-- <div class="max-w-md mx-auto bg-white border border-slate-800 shadow-lg rounded-2xl overflow-hidden hover:shadow-xl shadow-slate-300 transition-shadow duration-300">
+            <section
+                class="lg:px-32 md:px-16 px-5 pt-20 pb-10 bg-slate-50 relative pattern-dots pattern-slate-200 pattern-bg-white pattern-size-4 pattern-opacity-100">
+                <div class="mx-auto max-w-6xl">
+                    <h2 class="serif text-3xl font-bold mb-10 text-center text-slate-900">Recent Highlights</h2>
+                    <div class="flex justify-between items-center mb-6 py-2">
+                        <h3 class="serif text-2xl font-semibold text-slate-800">Publications</h3>
+                        <a href="./?page=publications"
+                            class="text-amber-600 hover:text-amber-800 font-medium transition flex items-center gap-1">View
+                            All <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                    <div id="pubs" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                        <!-- <div class="max-w-md mx-auto bg-white border border-slate-800 shadow-lg rounded-2xl overflow-hidden hover:shadow-xl shadow-slate-300 transition-shadow duration-300">
                         <div class="p-5">
                             <h3 class="text-xl font-semibold text-gray-800 mb-1">Editor’s Choice Award: Deep Learning for Hydro-Meteorological Prediction</h3>
                             <p class="text-sm text-gray-500 mb-3">Water Journal · March 2024</p>
@@ -71,249 +120,343 @@
                             <span class="italic">Co-authored with Dr. X</span>
                         </div>
                     </div> -->
-                </div>
+                    </div>
 
-                <div class="flex justify-between items-center mb-6 rounded-2xl py-3 px-5">
-                    <h3 class="text-xl font-bold">Internships</h3>
-                    <a href="./?page=internships" class=" hover:underline">View All →</a>
+                    <div class="flex justify-between items-center mt-12 mb-6 py-2">
+                        <h3 class="serif text-2xl font-semibold text-slate-800">Internships</h3>
+                        <a href="./?page=internships"
+                            class="text-amber-600 hover:text-amber-800 font-medium transition flex items-center gap-1">View
+                            All <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                    <div id="ints" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                    </div>
                 </div>
-                <div id="ints" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+            </section>
+            <div class="lg:px-32 md:px-16 px-5 mx-auto py-16 bg-white w-full border-t border-slate-200">
+                <div class="max-w-6xl mx-auto">
+                    <div class="flex justify-between items-center mb-8 py-2 border-b border-slate-200">
+                        <h3 class="serif text-2xl font-semibold text-slate-800">Latest Updates</h3>
+                        <a href="https://x.com/surajitdb" target="_blank"
+                            class="text-amber-600 hover:text-amber-800 font-medium transition flex items-center gap-1">View
+                            on X <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                    <div id="x-timeline"
+                        class="mx-auto max-w-2xl bg-white shadow-sm border border-slate-200 rounded-lg overflow-hidden">
+                    </div>
                 </div>
             </div>
         </section>
-        <div class="lg:px-32 md:px-16 px-5 mx-auto py-20 w-full">
-            <div class="flex justify-between items-center mb-6 rounded-2xl py-3 px-5">
-                <h3 class="text-xl font-bold">Latest Tweets</h3>
-                <a href="https://x.com/surajitdb" class=" hover:underline">View All →</a>
-            </div>
-            <div id="x-timeline"></div>
-        </div>
-    </section>
 
-    <section class="lg:px-32 md:px-16 px-5 pt-20 h-fit relative hidden" id="about">
-        <div class=" mx-auto md:pt-20 pt-5">
-            <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
-            <div id="about-content" class="space-y-4 whitespace-normal text-ellipsis overflow-hidden max-h-52 text-gray-600 text-base text-center leading-relaxed">
-                    I have several years of teaching and research experience in reputed institutions in India. I love to teach as much as I love to do research. I also love collaborative research in which my ideas and collaborators' ideas are fused to develop a novel concept. Though teaching and research sound different, one thing is prevalent: it takes years of hard work and patience to be effective at these skills.
-                <br>
-                    I have also had the opportunity to supervise students both at the undergraduate and postgraduate levels. I love mentoring students, especially those who show interest and put in some effort to get things done. I do not mentor students like the traditional supervisors or guides; I think I am also a part of the projects at hand. So, I take ownership of their projects by helping them with necessary tools like programming, selecting topics, providing them with the most relevant scientific papers, and teaching them how to write articles. The level of master's students' projects is worth getting published in reputed peer-reviewed journals. One of the papers was India's top paper during March 2021 in ASCE.
-                <br>
-                    I also make them aware of the need for specific skills to work in industry or pursue higher studies. I feel proud that I could get two of the master's students to pursue their PhD abroad.
-                <br>
-                    When it comes to my research, I thoroughly analyze whether it could be feasible given data availability, coding skills, etc. At times, I don't shy away from seeking the help of other fellow researchers or programming experts with entirely different backgrounds—only if I am not successful in getting help from online platforms. One of our recent papers with a fellow PhD colleague was selected for the Editor's Choice award by a water journal. Some collaborative works are in the initial stages of discussion, and some are submitted to reputed journals. I can't wait for many novel research outcomes from those works in reputable journals in the next few years, especially in machine/deep learning for time series prediction of hydro-meteorological variables.
-                <br>
-                    I am open to working on hydrological problems (drought, flood, compound events, time series, trend analysis, etc.) from local to global scales using statistical, process-based, and machine learning models. To achieve these, I often use gauge, satellite, and reanalysis data as inputs to the above models to answer some of the pressing hydrological and climate issues.
-                <br>
-                Finally, I am also looking for research collaborators with similar interests.
-            </div>
-
-            <div class=" mb-20 flex justify-center">
-                <a id="read-more-about" class="link">Read More...</a>
-            </div>
-
-            <h2 class="text-3xl font-bold mb-6 text-center">Qualification</h2>
-            <p class="text-gray-800 text-base text-center mb-20">PhD in Geoinformatics, National Institute of Technology Karnataka, Surathkal</p>
-
-            <h2 class="text-3xl font-bold mb-6 text-center">Experience</h2>
-            <table class=" table mb-14 border-2 border-slate-100">
-                <thead>
-                    <tr class="bg-slate-100 text-gray-800 rounded-t-xl">
-                        <th class="p-4">Position</th>
-                        <th class="p-4">Institution</th>
-                        <th class="p-4">Duration</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="hover:bg-slate-50">
-                        <td class="p-4">Assistant Professor (SG)</td>
-                        <td class="p-4">Shri Madhwa Vadiraja Institute of Technology and Management</td>
-                        <td class="p-4">Jan 2025 - Present</td>
-                    </tr>
-                    <tr class="hover:bg-slate-50">
-                        <td class="p-4">Adjunct Faculty</td>
-                        <td class="p-4">Shri Madhwa Vadiraja Institute of Technology and Management</td>
-                        <td class="p-4">Nov 2024 - Dec 2024</td>
-                    </tr>
-                    <tr class="hover:bg-slate-50">
-                        <td class="p-4">Job Board Manager (volunteer)</td>
-                        <td class="p-4">Climatematch Academy (Remote)</td>
-                        <td class="p-4">Apr 2023 - Jan 2025</td>
-                    </tr>
-                    <tr class="hover:bg-slate-50">
-                        <td class="p-4">Impact Scholars Mentor (volunteer)</td>
-                        <td class="p-4">Climatematch Academy (Remote)</td>
-                        <td class="p-4">Oct 2023 - July 2024</td>
-                    </tr>
-                    <tr class="hover:bg-slate-50">
-                        <td class="p-4 text-center" colspan="3">
-                            <a href="https://www.linkedin.com/in/surajit-deb-barma-4b1309249/#experience" target="_blank" class="underline cursor-pointer">View More</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="mt-10 text-center flex justify-center items-center">
-                <a href="mailto:surajitdbact@gmail.com" class="bg-slate-500 text-white px-6 py-3 rounded-full hover:bg-slate-600 transition duration-300 rounded-mg flex justify-center items-center gap-2 w-fit">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5H4.5a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-.958 1.846l-7.5 5.25a2.25 2.25 0 01-2.584 0l-7.5-5.25A2.25 2.25 0 012.25 6.993V6.75" />
-                    </svg>
-                    Contact Me
-                </a>
-            </div>
-
-            <div class="flex justify-center items-center gap-5 mt-10 pb-6">
-                <a href="" target="_blank" class="text-white hover:text-slate-200 transition duration-300 bg-slate-500 rounded-full p-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
-                        <path d="M12 0.296C5.372 0.296 0 5.669 0 12.296c0 5.286 3.438 9.773 8.207 11.365.6.11.793-.261.793-.577 0-.285-.01-1.04-.016-2.042-3.338.726-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.753-1.333-1.753-1.09-.745.082-.73.082-.73 1.204.085 1.838 1.236 1.838 1.236 1.07 1.833 2.808 1.304 3.492.997.108-.775.42-1.304.763-1.604-2.665-.304-5.466-1.332-5.466-5.932 0-1.31.468-2.382 1.235-3.222-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.495 11.495 0 0 1 3.003-.404c1.02.005 2.047.138 3.003.404 2.29-1.552 3.296-1.23 3.296-1.23.654 1.653.243 2.873.12 3.176.77.84 1.234 1.912 1.234 3.222 0 4.61-2.805 5.625-5.475 5.921.432.372.816 1.104.816 2.223 0 1.606-.015 2.901-.015 3.293 0 .319.19.694.801.576C20.565 22.065 24 17.578 24 12.296 24 5.669 18.627 0.296 12 0.296z"/>
-                    </svg>
-                </a>
-                <a href="https://www.linkedin.com/in/surajit-deb-barma-4b1309249/" target="_blank" class="text-white hover:text-slate-200 transition duration-300 bg-slate-500 rounded-full p-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
-                        <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.4h.05c.53-1 1.82-2.05 3.75-2.05 4 0 4.74 2.6 4.74 5.98V24h-4V15.05c0-2.13-.04-4.86-2.96-4.86-2.96 0-3.42 2.3-3.42 4.7V24h-4V8z"/>
-                    </svg>
-                </a>
-                <a href="https://medium.com/@surajitdb" target="_blank" class="text-white hover:text-slate-200 transition duration-300 bg-slate-500 rounded-full p-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
-                        <path d="M2.01 6.68a.72.72 0 0 0-.24-.6L.1 4.11V3.75h6.44l4.97 10.88L16.66 3.75h6.02v.36l-1.74 1.65a.45.45 0 0 0-.17.43v12.84a.45.45 0 0 0 .17.43l1.7 1.65v.36h-8.58v-.36l1.76-1.71c.17-.17.17-.22.17-.43V8.58l-4.9 12.61h-.66L4.57 8.58v8.9c-.05.31.06.62.3.83l2.28 2.75v.36H.03v-.36l2.28-2.75c.23-.21.33-.52.27-.83V6.68z"/>
-                    </svg>
-                </a>
-                <a href="https://scholar.google.com/citations?user=F-X8XHkAAAAJ&hl=en&oi=ao" target="_blank" class="text-white hover:text-slate-200 transition duration-300 bg-slate-500 rounded-full p-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" fill="currentColor" class="w-6 h-6">
-                        <path d="M240.4 0C152 0 88.7 53.9 88.7 128c0 27.6 10.3 53.3 27.7 74-29.4 23.2-46.5 58.4-46.5 95.5 0 64.6 53.7 117.1 119.9 117.1 42.1 0 79.3-21 101.8-53.3 8.5 1.8 17.5 2.8 26.7 2.8 70.4 0 127.7-56.6 127.7-126.2S388.7 112 318.3 112c-25.7 0-49.6 7.2-69.3 19.5C228.8 83.5 191.3 48 148 48c-25.3 0-49.3 7.9-69.5 21.2C48.7 36.7 142.3 0 240.4 0zm77.9 160c39.3 0 71.3 32 71.3 71.3s-32 71.3-71.3 71.3c-11.9 0-23.2-3-33.2-8.2-1.4-.7-2.6-1.5-3.8-2.4-3.2-2.3-6.2-4.8-9-7.6-2.8-2.8-5.3-5.8-7.6-9-.9-1.2-1.7-2.5-2.4-3.8-5.2-10-8.2-21.3-8.2-33.2 0-39.3 32-71.3 71.3-71.3zM171.3 352c-39.3 0-71.3-32-71.3-71.3s32-71.3 71.3-71.3 71.3 32 71.3 71.3-32 71.3-71.3 71.3z"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="lg:px-32 md:px-16 px-5 pt-20 h-fit relative hidden" id="research">
-        <div class=" mx-auto md:pt-10 pt-0">
-            <div class="flex items-center w-full mb-6 p-1 px-3 rounded-xl border border-slate-800 focus-within:ring-2 focus-within:ring-slate-500 bg-transparent hover:bg-transparent transition">
-                <svg id="search-btn" class="w-6 h-6 cursor-pointer text-slate-500 active:scale-85 transition-all" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 17L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2"/>
-                </svg>
-                <input
-                    id="search"
-                    class="flex-1 border-0 focus:ring-0 bg-transparent focus:outline-none text-black placeholder-gray-400"
-                    type="text"
-                    placeholder="Search Research Interests..." 
-                />
-            </div>
-
-            <div id="list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
-                <div class="item max-w-md mx-auto bg-white border border-slate-800 shadow-lg rounded-2xl overflow-hidden hover:shadow-xl shadow-slate-300 transition-shadow duration-300">
-                    <div class="p-5">
-                        <h3 class="title text-xl font-semibold text-gray-800 mb-1">Editor’s Choice Award: Deep Learning for Hydro-Meteorological Prediction</h3>
-                        <p class="text-sm text-gray-500 mb-3">Water Journal · March 2024</p>
-                        <p class="description text-gray-700 text-base mb-4">
-                        Our collaborative research explores the use of deep learning in predicting complex time-series of hydro-meteorological variables across multiple regions using gauge and satellite data.
-                        </p>
+        <section class="lg:px-32 md:px-16 px-5 py-20 min-h-full relative hidden pattern-dots pattern-slate-200 pattern-bg-white pattern-size-4 pattern-opacity-100 overflow-hidden" id="about">
+            <div class="absolute inset-0 bg-gradient-to-tr from-blue-900 to-amber-400 rounded-full blur-3xl opacity-10 -z-10 mix-blend-multiply w-[500px] h-[500px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+            <div class="mx-auto max-w-5xl md:pt-10 relative z-10 space-y-12 pb-10">
+                <div class="bg-white/95 backdrop-blur-md shadow-sm border border-slate-100 p-8 md:p-12 rounded-3xl">
+                    <h2 class="serif text-3xl md:text-4xl font-bold mb-8 text-center text-blue-950">About Me</h2>
+                    <div id="about-content"
+                        class="space-y-6 text-slate-700 text-lg leading-relaxed text-justify overflow-hidden max-h-[300px] relative">
+                        I have several years of teaching and research experience in reputed institutions in India. I love to
+                        teach as much as I love to do research. I also love collaborative research in which my ideas and
+                        collaborators' ideas are fused to develop a novel concept. Though teaching and research sound
+                        different, one thing is prevalent: it takes years of hard work and patience to be effective at these
+                        skills.
+                        <br>
+                        I have also had the opportunity to supervise students both at the undergraduate and postgraduate
+                        levels. I love mentoring students, especially those who show interest and put in some effort to get
+                        things done. I do not mentor students like the traditional supervisors or guides; I think I am also
+                        a part of the projects at hand. So, I take ownership of their projects by helping them with
+                        necessary tools like programming, selecting topics, providing them with the most relevant scientific
+                        papers, and teaching them how to write articles. The level of master's students' projects is worth
+                        getting published in reputed peer-reviewed journals. One of the papers was India's top paper during
+                        March 2021 in ASCE.
+                        <br>
+                        I also make them aware of the need for specific skills to work in industry or pursue higher studies.
+                        I feel proud that I could get two of the master's students to pursue their PhD abroad.
+                        <br>
+                        When it comes to my research, I thoroughly analyze whether it could be feasible given data
+                        availability, coding skills, etc. At times, I don't shy away from seeking the help of other fellow
+                        researchers or programming experts with entirely different backgrounds—only if I am not successful
+                        in getting help from online platforms. One of our recent papers with a fellow PhD colleague was
+                        selected for the Editor's Choice award by a water journal. Some collaborative works are in the
+                        initial stages of discussion, and some are submitted to reputed journals. I can't wait for many
+                        novel research outcomes from those works in reputable journals in the next few years, especially in
+                        machine/deep learning for time series prediction of hydro-meteorological variables.
+                        <br>
+                        I am open to working on hydrological problems (drought, flood, compound events, time series, trend
+                        analysis, etc.) from local to global scales using statistical, process-based, and machine learning
+                        models. To achieve these, I often use gauge, satellite, and reanalysis data as inputs to the above
+                        models to answer some of the pressing hydrological and climate issues.
+                        <br>
+                        Finally, I am also looking for research collaborators with similar interests.
                     </div>
-                    <div class="bg-gray-100 px-5 py-3 flex justify-between items-center text-sm text-gray-600">
-                        <a href="https://doi.org/your-paper-link" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
-                        View Paper →
-                        </a>
-                        <span class="italic">Co-authored with Dr. X</span>
+                    <div class="mt-8 flex justify-center border-t border-slate-100 pt-8">
+                        <button id="read-more-about"
+                            class="text-amber-600 font-medium hover:text-amber-800 underline underline-offset-4 decoration-2 transition">Read
+                            More...</button>
                     </div>
                 </div>
-                <div class="item max-w-md mx-auto bg-white border border-slate-800 shadow-lg rounded-2xl overflow-hidden hover:shadow-xl shadow-slate-300 transition-shadow duration-300">
-                    <div class="p-5">
-                        <h3 class="title text-xl font-semibold text-gray-800 mb-1">Editor’s Choice Award: Deep Learning for Hydro-Meteorological Detection</h3>
-                        <p class="text-sm text-gray-500 mb-3">Water Journal · March 2024</p>
-                        <p class="description text-gray-700 text-base mb-4">
-                        Our collaborative research explores the use of deep learning in predicting complex time-series of hydro-meteorological variables across multiple regions using gauge and satellite data.
-                        </p>
-                    </div>
-                    <div class="bg-gray-100 px-5 py-3 flex justify-between items-center text-sm text-gray-600">
-                        <a href="https://doi.org/your-paper-link" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
-                        View Paper →
+
+                <div class="bg-white/95 backdrop-blur-md shadow-sm border border-slate-100 p-8 md:p-12 rounded-3xl">
+                    <h2 class="serif text-3xl font-bold mb-6 text-center text-blue-950">Qualification</h2>
+                    <p class="text-slate-700 text-lg text-center mb-12">PhD in Geoinformatics, National Institute of Technology Karnataka,
+                        Surathkal</p>
+
+                    <h2 class="serif text-3xl font-bold mb-8 text-center text-blue-950">Experience</h2>
+                    <div class="overflow-x-auto shadow-sm rounded-xl border border-slate-200">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-blue-950 text-white rounded-t-xl">
+                            <th class="p-4">Position</th>
+                            <th class="p-4">Institution</th>
+                            <th class="p-4">Duration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-4">Assistant Professor (SG)</td>
+                            <td class="p-4">Shri Madhwa Vadiraja Institute of Technology and Management</td>
+                            <td class="p-4">Jan 2025 - Present</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-4">Adjunct Faculty</td>
+                            <td class="p-4">Shri Madhwa Vadiraja Institute of Technology and Management</td>
+                            <td class="p-4">Nov 2024 - Dec 2024</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-4">Job Board Manager (volunteer)</td>
+                            <td class="p-4">Climatematch Academy (Remote)</td>
+                            <td class="p-4">Apr 2023 - Jan 2025</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-4">Impact Scholars Mentor (volunteer)</td>
+                            <td class="p-4">Climatematch Academy (Remote)</td>
+                            <td class="p-4">Oct 2023 - July 2024</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-4 text-center" colspan="3">
+                                <a href="https://www.linkedin.com/in/surajit-deb-barma-4b1309249/#experience"
+                                    target="_blank" class="text-amber-600 hover:text-amber-800 font-medium underline cursor-pointer">View More</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+                </div>
+
+                <div class="bg-blue-950/5 backdrop-blur-md border border-blue-950/10 p-8 md:p-12 rounded-3xl text-center">
+                    <h2 class="serif text-3xl font-bold mb-8 text-blue-950">Let's Connect</h2>
+                    <div class="flex flex-col items-center">
+                        <a href="mailto:surajitdbact@gmail.com"
+                            class="bg-amber-500 text-white px-8 py-3 rounded-full hover:bg-amber-600 transition-all duration-300 shadow-md hover:shadow-lg flex justify-center items-center gap-2 w-fit font-medium">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6 text-currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5H4.5a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-.958 1.846l-7.5 5.25a2.25 2.25 0 01-2.584 0l-7.5-5.25A2.25 2.25 0 012.25 6.993V6.75" />
+                            </svg>
+                            Contact Me
                         </a>
-                        <span class="italic">Co-authored with Dr. X</span>
+                        
+                        <div class="flex justify-center items-center gap-5 mt-10">
+                    <a href="" target="_blank"
+                        class="text-white hover:-translate-y-1 transition-all duration-300 bg-blue-950 hover:bg-blue-900 shadow-md rounded-full p-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0.296C5.372 0.296 0 5.669 0 12.296c0 5.286 3.438 9.773 8.207 11.365.6.11.793-.261.793-.577 0-.285-.01-1.04-.016-2.042-3.338.726-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.753-1.333-1.753-1.09-.745.082-.73.082-.73 1.204.085 1.838 1.236 1.838 1.236 1.07 1.833 2.808 1.304 3.492.997.108-.775.42-1.304.763-1.604-2.665-.304-5.466-1.332-5.466-5.932 0-1.31.468-2.382 1.235-3.222-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.495 11.495 0 0 1 3.003-.404c1.02.005 2.047.138 3.003.404 2.29-1.552 3.296-1.23 3.296-1.23.654 1.653.243 2.873.12 3.176.77.84 1.234 1.912 1.234 3.222 0 4.61-2.805 5.625-5.475 5.921.432.372.816 1.104.816 2.223 0 1.606-.015 2.901-.015 3.293 0 .319.19.694.801.576C20.565 22.065 24 17.578 24 12.296 24 5.669 18.627 0.296 12 0.296z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/surajit-deb-barma-4b1309249/" target="_blank"
+                        class="text-white hover:-translate-y-1 transition-all duration-300 bg-blue-950 hover:bg-blue-900 shadow-md rounded-full p-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
+                            <path
+                                d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.4h.05c.53-1 1.82-2.05 3.75-2.05 4 0 4.74 2.6 4.74 5.98V24h-4V15.05c0-2.13-.04-4.86-2.96-4.86-2.96 0-3.42 2.3-3.42 4.7V24h-4V8z" />
+                        </svg>
+                    </a>
+                    <a href="https://medium.com/@surajitdb" target="_blank"
+                        class="text-white hover:-translate-y-1 transition-all duration-300 bg-blue-950 hover:bg-blue-900 shadow-md rounded-full p-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
+                            <path
+                                d="M2.01 6.68a.72.72 0 0 0-.24-.6L.1 4.11V3.75h6.44l4.97 10.88L16.66 3.75h6.02v.36l-1.74 1.65a.45.45 0 0 0-.17.43v12.84a.45.45 0 0 0 .17.43l1.7 1.65v.36h-8.58v-.36l1.76-1.71c.17-.17.17-.22.17-.43V8.58l-4.9 12.61h-.66L4.57 8.58v8.9c-.05.31.06.62.3.83l2.28 2.75v.36H.03v-.36l2.28-2.75c.23-.21.33-.52.27-.83V6.68z" />
+                        </svg>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=F-X8XHkAAAAJ&hl=en&oi=ao" target="_blank"
+                        class="text-white hover:-translate-y-1 transition-all duration-300 bg-blue-950 hover:bg-blue-900 shadow-md rounded-full p-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" fill="currentColor"
+                            class="w-6 h-6">
+                            <path
+                                d="M240.4 0C152 0 88.7 53.9 88.7 128c0 27.6 10.3 53.3 27.7 74-29.4 23.2-46.5 58.4-46.5 95.5 0 64.6 53.7 117.1 119.9 117.1 42.1 0 79.3-21 101.8-53.3 8.5 1.8 17.5 2.8 26.7 2.8 70.4 0 127.7-56.6 127.7-126.2S388.7 112 318.3 112c-25.7 0-49.6 7.2-69.3 19.5C228.8 83.5 191.3 48 148 48c-25.3 0-49.3 7.9-69.5 21.2C48.7 36.7 142.3 0 240.4 0zm77.9 160c39.3 0 71.3 32 71.3 71.3s-32 71.3-71.3 71.3c-11.9 0-23.2-3-33.2-8.2-1.4-.7-2.6-1.5-3.8-2.4-3.2-2.3-6.2-4.8-9-7.6-2.8-2.8-5.3-5.8-7.6-9-.9-1.2-1.7-2.5-2.4-3.8-5.2-10-8.2-21.3-8.2-33.2 0-39.3 32-71.3 71.3-71.3zM171.3 352c-39.3 0-71.3-32-71.3-71.3s32-71.3 71.3-71.3 71.3 32 71.3 71.3-32 71.3-71.3 71.3z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="lg:px-32 md:px-16 px-5 py-20 min-h-screen relative hidden pattern-dots pattern-slate-200 pattern-bg-white pattern-size-4 pattern-opacity-100 overflow-hidden" id="research">
+            <div class="absolute inset-0 bg-gradient-to-tr from-blue-900 to-amber-400 rounded-full blur-3xl opacity-10 -z-10 mix-blend-multiply w-[600px] h-[600px] top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+            <div class="mx-auto max-w-6xl md:pt-10 pt-0 relative z-10">
+                <h2 class="serif text-3xl font-bold mb-10 text-center text-blue-950">Research Interests</h2>
+                <div
+                    class="flex items-center w-full max-w-2xl mx-auto mb-10 p-2 px-4 rounded-full border border-slate-300 focus-within:border-amber-500 focus-within:ring-2 focus-within:ring-amber-100 bg-white shadow-sm transition">
+                    <svg id="search-btn"
+                        class="w-5 h-5 cursor-pointer text-slate-400 active:text-amber-600 transition-colors"
+                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 17L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path
+                            d="M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
+                            stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    <input id="search"
+                        class="flex-1 ml-3 border-0 focus:ring-0 bg-transparent focus:outline-none text-slate-800 placeholder-slate-400"
+                        type="text" placeholder="Search Research Interests..." />
+                </div>
+
+                <div id="list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+                    <div
+                        class="item w-full mx-auto bg-white border border-slate-200 shadow-sm rounded-xl overflow-hidden hover:shadow-md transition-shadow duration-300 flex flex-col">
+                        <div class="p-6 flex-1">
+                            <h3 class="serif text-xl font-semibold text-blue-950 mb-2">Editor’s Choice Award: Deep
+                                Learning for Hydro-Meteorological Prediction</h3>
+                            <p class="text-sm font-medium text-amber-600 mb-4">Water Journal · March 2024</p>
+                            <p class="description text-slate-600 text-base mb-4 max-h-60 overflow-y-auto leading-relaxed">
+                                Our collaborative research explores the use of deep learning in predicting complex
+                                time-series of hydro-meteorological variables across multiple regions using gauge and
+                                satellite data.
+                            </p>
+                        </div>
+                        <div class="bg-slate-50 border-t border-slate-100 px-6 py-4 flex justify-between items-center text-sm">
+                            <a href="https://doi.org/your-paper-link" class="text-amber-600 hover:text-amber-800 font-medium hover:underline transition-colors flex items-center gap-1"
+                                target="_blank" rel="noopener noreferrer">
+                                View Paper <span aria-hidden="true">&rarr;</span>
+                            </a>
+                            <span class="italic text-slate-500">Co-authored with Dr. X</span>
+                        </div>
+                    </div>
+                    <div
+                        class="item w-full mx-auto bg-white border border-slate-200 shadow-sm rounded-xl overflow-hidden hover:shadow-md transition-shadow duration-300 flex flex-col">
+                        <div class="p-6 flex-1">
+                            <h3 class="serif text-xl font-semibold text-blue-950 mb-2">Editor’s Choice Award: Deep
+                                Learning for Hydro-Meteorological Detection</h3>
+                            <p class="text-sm font-medium text-amber-600 mb-4">Water Journal · March 2024</p>
+                            <p class="description text-slate-600 text-base mb-4 max-h-60 overflow-y-auto leading-relaxed">
+                                Our collaborative research explores the use of deep learning in predicting complex
+                                time-series of hydro-meteorological variables across multiple regions using gauge and
+                                satellite data.
+                            </p>
+                        </div>
+                        <div class="bg-slate-50 border-t border-slate-100 px-6 py-4 flex justify-between items-center text-sm">
+                            <a href="https://doi.org/your-paper-link" class="text-amber-600 hover:text-amber-800 font-medium hover:underline transition-colors flex items-center gap-1"
+                                target="_blank" rel="noopener noreferrer">
+                                View Paper <span aria-hidden="true">&rarr;</span>
+                            </a>
+                            <span class="italic text-slate-500">Co-authored with Dr. X</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="max-w-4xl mx-auto mb-20 bg-white/95 backdrop-blur-md p-8 md:p-12 rounded-3xl shadow-sm border border-slate-100 mt-10">
+                    <h2 class="serif text-3xl font-bold mb-8 text-center text-blue-950">
+                        Summary of Interests</h2>
+                    <div class="space-y-6 text-slate-700 text-lg text-center leading-relaxed">
+                        <p>
+                            My research interests lie in the intersection of hydrology, machine learning, and time series
+                            analysis. I am particularly focused on developing innovative approaches to predict
+                            hydro-meteorological variables using deep learning techniques.
+                        </p>
+                        <p>
+                            I am also interested in exploring the applications of machine learning in hydrological modeling,
+                            drought and flood prediction, and climate change impact assessment.
+                        </p>
+                        <p>
+                            I am open to collaborations with researchers and institutions working on similar topics.
+                        </p>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <h2 class="text-3xl font-bold mb-6 text-center">Research Interests</h2>
-            <div class="space-y-4 text-gray-800 text-base text-center leading-relaxed mb-20">
-                <p>
-                    My research interests lie in the intersection of hydrology, machine learning, and time series analysis. I am particularly focused on developing innovative approaches to predict hydro-meteorological variables using deep learning techniques.
-                </p>
-                <p>
-                    I am also interested in exploring the applications of machine learning in hydrological modeling, drought and flood prediction, and climate change impact assessment.
-                </p>
-                <p>
-                    I am open to collaborations with researchers and institutions working on similar topics.
-                </p>
+        <section class="lg:px-32 md:px-16 px-5 py-20 min-h-screen relative hidden pattern-dots pattern-slate-200 pattern-bg-white pattern-size-4 pattern-opacity-100 overflow-hidden" id="publications">
+            <div class="absolute inset-0 bg-gradient-to-tr from-blue-900 to-amber-400 rounded-full blur-3xl opacity-10 -z-10 mix-blend-multiply w-[600px] h-[600px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+            <div class="mx-auto max-w-6xl md:pt-10 pt-0 flex flex-col items-center relative z-10">
+                <h2 class="serif text-3xl font-bold mb-10 text-center text-blue-950">Publications</h2>
+                <div
+                    class="flex items-center w-full max-w-2xl mx-auto mb-10 p-2 px-4 rounded-full border border-slate-300 focus-within:border-amber-500 focus-within:ring-2 focus-within:ring-amber-100 bg-white shadow-sm transition">
+                    <svg id="search-btn"
+                        class="w-5 h-5 cursor-pointer text-slate-400 active:text-amber-600 transition-colors"
+                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 17L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path
+                            d="M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
+                            stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    <input id="search"
+                        class="flex-1 ml-3 border-0 focus:ring-0 bg-transparent focus:outline-none text-slate-800 placeholder-slate-400"
+                        type="text" placeholder="Search Publications..." />
+                </div>
+
+                <div id="nothing" class="flex-1 w-full flex items-center justify-center py-10">
+                    <p class="text-gray-500 text-center">Nothing here!</p>
+                </div>
+
+                <div id="list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-6 w-full">
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="lg:px-32 md:px-16 px-5 pt-20 h-fit relative hidden" id="publications">
-        <div class=" mx-auto md:pt-10 pt-0 flex flex-col items-center min-h-96">
-            <div class="flex items-center w-full mb-6 p-1 px-3 rounded-xl border border-slate-800 focus-within:ring-2 focus-within:ring-slate-500 bg-transparent hover:bg-transparent transition">
-                <svg id="search-btn" class="w-6 h-6 cursor-pointer text-slate-500 active:scale-85 transition-all" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 17L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2"/>
-                </svg>
-                <input
-                    id="search"
-                    class="flex-1 border-0 focus:ring-0 bg-transparent focus:outline-none text-black placeholder-gray-400"
-                    type="text"
-                    placeholder="Search Publications..." 
-                />
+        <section class="lg:px-32 md:px-16 px-5 py-20 min-h-screen relative hidden border-t border-slate-200 pattern-dots pattern-slate-200 pattern-bg-white pattern-size-4 pattern-opacity-100 overflow-hidden"
+            id="training">
+            <div class="absolute inset-0 bg-gradient-to-tr from-blue-900 to-amber-400 rounded-full blur-3xl opacity-10 -z-10 mix-blend-multiply w-[400px] h-[400px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+            <div class="mx-auto max-w-4xl md:py-32 py-20 text-center relative z-10">
+                <h2 class="serif text-3xl md:text-4xl font-bold mb-10 text-blue-950">Training & Consultancy</h2>
+                <div
+                    class="space-y-6 text-slate-700 text-lg leading-relaxed bg-slate-50 p-8 rounded-2xl shadow-inner border border-slate-100">
+                    <p>
+                        Training and consultancy in the areas of time series modeling using statistical and machine
+                        learning models for stock prices and climate variables; remote sensing, GIS, and Google Earth
+                        Engine (GEE) applications in agriculture, water resources, and climatology; and agentic
+                        coding/development. Surface water and groundwater modeling are also areas of interest.
+                    </p>
+                </div>
             </div>
+        </section>
 
-            <div id="nothing" class="flex-1 w-full flex items-center justify-center">
-                <p class="text-gray-500 text-center">Nothing here!</p>
+        <section class="lg:px-32 md:px-16 px-5 py-20 min-h-screen relative hidden pattern-dots pattern-slate-200 pattern-bg-white pattern-size-4 pattern-opacity-100 overflow-hidden" id="internships">
+            <div class="absolute inset-0 bg-gradient-to-tr from-blue-900 to-amber-400 rounded-full blur-3xl opacity-10 -z-10 mix-blend-multiply w-[600px] h-[600px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+            <div class="mx-auto max-w-6xl md:pt-10 pt-0 flex flex-col items-center relative z-10">
+                <h2 class="serif text-3xl font-bold mb-10 text-center text-blue-950">Internship Opportunities</h2>
+                <div
+                    class="flex items-center w-full max-w-2xl mx-auto mb-10 p-2 px-4 rounded-full border border-slate-300 focus-within:border-amber-500 focus-within:ring-2 focus-within:ring-amber-100 bg-white shadow-sm transition">
+                    <svg id="search-btn"
+                        class="w-5 h-5 cursor-pointer text-slate-400 active:text-amber-600 transition-colors"
+                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 17L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path
+                            d="M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
+                            stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    <input id="search"
+                        class="flex-1 ml-3 border-0 focus:ring-0 bg-transparent focus:outline-none text-slate-800 placeholder-slate-400"
+                        type="text" placeholder="Search Internships..." />
+                </div>
+
+                <div id="nothing" class="flex-1 w-full flex items-center justify-center py-10">
+                    <p class="text-gray-500 text-center">Nothing here!</p>
+                </div>
+
+                <div id="list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-6 w-full">
+                </div>
             </div>
+        </section>
 
-            <div id="list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+        <footer class="bg-slate-900 border-t border-slate-200">
+            <div
+                class="max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-center py-6 px-5 text-slate-300 font-light">
+                &copy; 2024 Dr. Surajit Deb Barma. All rights reserved.
             </div>
-        </div>
-    </section>
-
-    <section class="lg:px-32 md:px-16 px-5 pt-20 h-fit relative hidden" id="training">
-        <div class=" mx-auto md:py-32 py-20">
-            <h2 class="text-3xl font-bold mb-6 text-center">Training & Consultancy</h2>
-            <div class="space-y-4 text-gray-800 text-base text-center leading-relaxed mb-6">
-                <p>
-                    Training and consultancy in the areas of time series modeling using statistical and machine learning models for stock prices and climate variables; remote sensing, GIS, and Google Earth Engine (GEE) applications in agriculture, water resources, and climatology; and agentic coding/development. Surface water and groundwater modeling are also areas of interest.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="lg:px-32 md:px-16 px-5 pt-20 h-fit relative hidden" id="internships">
-        <div class=" mx-auto md:pt-10 pt-0 flex flex-col items-center min-h-96">
-            <div class="flex items-center w-full mb-6 p-1 px-3 rounded-xl border border-slate-800 focus-within:ring-2 focus-within:ring-slate-500 bg-transparent hover:bg-transparent transition">
-                <svg id="search-btn" class="w-6 h-6 cursor-pointer text-slate-500 active:scale-85 transition-all" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 17L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2"/>
-                </svg>
-                <input
-                    id="search"
-                    class="flex-1 border-0 focus:ring-0 bg-transparent focus:outline-none text-black placeholder-gray-400"
-                    type="text"
-                    placeholder="Search Internships..." 
-                />
-            </div>
-
-            <div id="nothing" class="flex-1 w-full flex items-center justify-center">
-                <p class="text-gray-500 text-center">Nothing here!</p>
-            </div>
-
-            <div id="list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6 w-full">
-            </div>
-        </div>
-    </section>
-
-    <footer class="flex justify-between py-3 md:px-28 px-5">
-        <div class="w-full md:flex-row flex-col gap-2 flex text-gray-600 justify-center items-center rounded-2xl py-3 px-5 bg-slate-200">
-            &copy; 2024 Surajit Deb Barma. All rights reserved.
-        </div>
-    </footer>
-    <script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    <script src="./models.js"></script>
-    <script src="./script.js"></script>
+        </footer>
+        <script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <script src="./models.js"></script>
+        <script src="./script.js"></script>
 </body>
+
 </html>

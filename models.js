@@ -12,19 +12,19 @@ class Publication {
 
     get element() {
         let div = document.createElement("div");
-        div.className = "item max-w-md mx-auto bg-white border border-slate-800 shadow-lg rounded-2xl overflow-hidden hover:shadow-xl shadow-slate-300 transition-shadow duration-300 flex flex-col";
+        div.className = "item w-full mx-auto bg-white border border-slate-200 shadow-sm rounded-xl overflow-hidden hover:shadow-md transition-shadow duration-300 flex flex-col";
         div.id = this.id;
         div.innerHTML = `
-            <div class="p-5 flex-1">
-                <h3 class="title text-xl font-semibold text-gray-800 mb-1">${this.title}</h3>
-                <p class="text-sm text-gray-500 mb-3">${this.pubDate}</p>
-                <div class="description text-gray-700 text-base mb-4 max-h-80 overflow-y-auto">
+            <div class="p-6 flex-1">
+                <h3 class="serif text-xl font-semibold text-blue-950 mb-2">${this.title}</h3>
+                <p class="text-sm font-medium text-amber-600 mb-4">${this.pubDate}</p>
+                <div class="description text-slate-600 text-base mb-4 max-h-60 overflow-y-auto leading-relaxed">
                 ${this.description}
                 </div>
             </div>
-            <div class="bg-gray-100 px-5 py-3 flex justify-between items-center text-sm text-gray-600">
-                <a href="${this.link}" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
-                View Paper →
+            <div class="bg-slate-50 border-t border-slate-100 px-6 py-4 flex justify-between items-center text-sm">
+                <a href="${this.link}" class="text-amber-600 hover:text-amber-800 font-medium hover:underline transition-colors flex items-center gap-1" target="_blank" rel="noopener noreferrer">
+                View Paper <span aria-hidden="true">&rarr;</span>
                 </a>
             </div>
         `;
@@ -49,29 +49,32 @@ class Internship {
 
     get element() {
         let div = document.createElement("div");
-        div.className = "item max-w-md w-full mx-auto bg-white border border-slate-800 shadow-lg rounded-2xl overflow-hidden shadow-slate-300 hover:shadow-xl transition-shadow duration-300 flex flex-col";
+        div.className = "item w-full mx-auto bg-white border border-slate-200 shadow-sm rounded-xl overflow-hidden hover:shadow-md transition-shadow duration-300 flex flex-col";
         div.id = this.id;
         div.innerHTML = `
-            <div class="p-5 grow flex flex-col">
-                <h3 class="title text-xl font-semibold text-gray-800 mb-1">${this.title}</h3>
-                <p class="text-sm text-gray-500 mb-3">Applications ${this.open ? "Open" : "Closed"} · ${this.date}</p>
-                <p class="description text-gray-700 text-base mb-4 max-h-80 overflow-y-auto grow">
+            <div class="p-6 grow flex flex-col">
+                <h3 class="serif text-xl font-semibold text-blue-950 mb-2">${this.title}</h3>
+                <div class="flex items-center gap-2 text-sm mb-4">
+                    <span class="px-2 py-1 rounded text-xs font-medium ${this.open ? 'bg-amber-100 text-amber-800' : 'bg-slate-100 text-slate-600'}">${this.open ? "Applications Open" : "Applications Closed"}</span>
+                    <span class="text-slate-500">&bull; ${this.date}</span>
+                </div>
+                <div class="description text-slate-600 text-base mb-6 max-h-60 overflow-y-auto grow leading-relaxed">
                 ${this.description}
-                </p>
-                <span class="italic pt-1 rounded-full text-sm ${this.mentorship_certificate ? "flex" : "hidden"} gap-2 text-slate-800 mb-5">
-                    <svg class="w-5 h-5 text-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                </div>
+                <span class="italic pt-1 rounded-full text-sm font-medium ${this.mentorship_certificate ? "flex" : "hidden"} items-center gap-2 text-slate-700 mb-5 mt-2">
+                    <svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10 4C10 7.31371 7.31371 10 4 10C7.31371 10 10 12.6863 10 16C10 12.6863 12.6863 10 16 10C12.6863 10 10 7.31371 10 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M17.5 15C17.5 16.3807 16.3807 17.5 15 17.5C16.3807 17.5 17.5 18.6193 17.5 20C17.5 18.6193 18.6193 17.5 20 17.5C18.6193 17.5 17.5 16.3807 17.5 15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                     Mentorship & Certification Provided
                 </span>
-                <p class="${this.deadline ? "" : "hidden"} text-red-400 text-sm">
+                <p class="${this.deadline ? "" : "hidden"} text-red-500 font-medium text-sm mt-auto">
                     Deadline: ${this.deadline}
                 </p>
             </div>
-            <div class="bg-gray-100 px-5 py-3 flex justify-between items-center text-sm text-gray-600">
-                <a href="${this.link}" class="${this.open ? "text-blue-600" : "text-slate-500"} hover:underline ${this.open ? "" : "pointer-events-none"}" target="_blank">
-                    ${this.open ? "Apply Now" : "Applications Closed"}  
+            <div class="bg-slate-50 border-t border-slate-100 px-6 py-4 flex justify-between items-center text-sm">
+                <a href="${this.link}" class="${this.open ? "text-blue-950 hover:text-blue-800" : "text-slate-400"} font-medium hover:underline transition-colors flex items-center gap-1 ${this.open ? "" : "pointer-events-none"}" target="_blank">
+                    ${this.open ? "Apply Now" : "Applications Closed"} <span aria-hidden="true" class="${this.open ? '' : 'hidden'}">&rarr;</span>
                 </a>
             </div>
         `;

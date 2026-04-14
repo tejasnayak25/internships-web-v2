@@ -51,10 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
         readMoreBtn.onclick = () => {
             if(readMoreBtn.innerText === "Read More...") {
                 readMoreBtn.innerText = "Read Less...";
-                aboutContent.classList.remove("max-h-52");
+                aboutContent.classList.remove("max-h-[300px]");
             } else {
                 readMoreBtn.innerText = "Read More...";
-                aboutContent.classList.add("max-h-52");
+                aboutContent.classList.add("max-h-[300px]");
             }
         }
     }

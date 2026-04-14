@@ -1,17 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
     let toggleMenu = document.getElementById("toggle-menu");
+    let closeMenu = document.getElementById("close-sidebar");
+    let navMenu = document.getElementById("nav-menu");
+    let sidebarOverlay = document.getElementById("sidebar-overlay");
 
-    toggleMenu.onclick = () => {
-        document.querySelector('nav ul').classList.toggle('hidden');
-        document.querySelector('nav ul').classList.toggle('flex');
+    const openSidebar = () => {
+        navMenu.classList.remove("translate-x-full");
+        sidebarOverlay.classList.remove("hidden");
+        setTimeout(() => sidebarOverlay.classList.remove("opacity-0"), 10);
+    };
 
-        if(toggleMenu.querySelector("#open-menu").classList.contains("hidden")) {
-            toggleMenu.querySelector("#open-menu").classList.remove("hidden");
-            toggleMenu.querySelector("#close-menu").classList.add("hidden");
-        } else {
-            toggleMenu.querySelector("#open-menu").classList.add("hidden");
-            toggleMenu.querySelector("#close-menu").classList.remove("hidden");
-        }
+    const closeSidebarHandler = () => {
+        navMenu.classList.add("translate-x-full");
+        sidebarOverlay.classList.add("opacity-0");
+        setTimeout(() => sidebarOverlay.classList.add("hidden"), 300);
+    };
+
+    toggleMenu.onclick = openSidebar;
+    
+    if (closeMenu) {
+        closeMenu.onclick = closeSidebarHandler;
+    }
+    
+    if (sidebarOverlay) {
+        sidebarOverlay.onclick = closeSidebarHandler;
     }
 
     let page = "home";

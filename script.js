@@ -185,6 +185,19 @@ document.addEventListener('DOMContentLoaded', () => {
         container.append(new EmptyState(config).element);
     };
 
+    const renderHomeGridEmptyState = (listSelector, config) => {
+        const list = document.querySelector(listSelector);
+        if (!list || !config) {
+            return;
+        }
+
+        list.innerHTML = "";
+        const fullWidthWrapper = document.createElement("div");
+        fullWidthWrapper.className = "md:col-span-2 lg:col-span-3";
+        fullWidthWrapper.append(new EmptyState(config).element);
+        list.append(fullWidthWrapper);
+    };
+
     if (navLinks.length > 0) {
         navLinks.forEach(link => {
             link.classList.remove("bg-blue-950", "text-white", "border-blue-900", "shadow-sm");
@@ -253,6 +266,10 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(res => res.json())
         .then(data => {
             const list = document.querySelector(`#${page} #pubs`);
+            if (!list) {
+                return;
+            }
+            list.innerHTML = "";
             
             if(data.items && data.items.length > 0) {
                 data.items.slice(0, 3).forEach(post => {
@@ -268,11 +285,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     list.append(li.element);
                 });
             } else {
-                const li = document.createElement("p");
-                li.className = "text-gray-500 text-center";
-                li.textContent = "No publications found.";
-                list.append(li);
+                renderHomeGridEmptyState(`#${page} #pubs`, {
+                    title: "No publications yet",
+                    description: "Recent publication highlights will appear here once they are available.",
+                    actionLabel: "View Full Publications",
+                    actionHref: "./?page=publications"
+                });
             }
+        })
+        .catch(() => {
+            renderHomeGridEmptyState(`#${page} #pubs`, {
+                title: "Unable to load publications",
+                description: "The publication feed could not be fetched right now. Please try again shortly.",
+                actionLabel: "Open Publications",
+                actionHref: "./?page=publications"
+            });
         });
 
 
@@ -282,9 +309,14 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(res => res.json())
         .then(data => {
             const list = document.querySelector(`#${page} #ints`);
+            if (!list) {
+                return;
+            }
+            list.innerHTML = "";
+            const openInternships = Array.isArray(data) ? data.filter(i => i.open).slice(0, 3) : [];
             
-            if(data && data.length > 0) {
-                data.filter(i => i.open).splice(0, 3).forEach(post => {
+            if(openInternships.length > 0) {
+                openInternships.forEach(post => {
                     const li = new Internship({
                         title: post.title,
                         description: post.description,
@@ -298,11 +330,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     list.append(li.element);
                 });
             } else {
-                const li = document.createElement("p");
-                li.className = "text-gray-500 text-center";
-                li.textContent = "No internships found.";
-                list.append(li);
+                renderHomeGridEmptyState(`#${page} #ints`, {
+                    title: "No open internships right now",
+                    description: "New internship opportunities will be highlighted here as soon as they open.",
+                    actionLabel: "Browse Internships",
+                    actionHref: "./?page=internships"
+                });
             }
+        })
+        .catch(() => {
+            renderHomeGridEmptyState(`#${page} #ints`, {
+                title: "Unable to load internships",
+                description: "Internship listings could not be fetched right now. Please try again shortly.",
+                actionLabel: "Open Internships",
+                actionHref: "./?page=internships"
+            });
         });
     }
 

@@ -1,4 +1,4 @@
-<html lang="en" class="bg-white text-black">
+<html lang="en" class="h-full bg-white text-black">
 
 <head>
     <meta charset="UTF-8">
@@ -32,7 +32,7 @@
     </style>
 </head>
 
-<body class="relative min-h-full bg-slate-50 text-slate-800">
+<body class="relative min-h-screen bg-slate-50 text-slate-800">
     <!-- Sidebar Overlay -->
     <div id="sidebar-overlay" class="fixed left-0 right-0 bottom-0 bg-blue-950/20 backdrop-blur-sm z-40 hidden opacity-0 transition-opacity duration-300"></div>
 
@@ -153,7 +153,7 @@
             </div>
         </section>
 
-        <section class="lg:px-32 md:px-16 px-5 py-20 min-h-full relative hidden pattern-dots pattern-slate-200 pattern-bg-white pattern-size-4 pattern-opacity-100 overflow-hidden" id="about">
+        <section class="lg:px-32 md:px-16 px-5 py-16 lg:py-12 min-h-full relative hidden pattern-dots pattern-slate-200 pattern-bg-white pattern-size-4 pattern-opacity-100 overflow-hidden" id="about">
             <div class="absolute inset-0 bg-gradient-to-tr from-blue-900 to-amber-400 rounded-full blur-3xl opacity-10 -z-10 mix-blend-multiply w-[500px] h-[500px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
             <div class="mx-auto max-w-5xl md:pt-10 relative z-10 space-y-12 pb-10">
                 <div class="bg-white/95 backdrop-blur-md shadow-sm border border-slate-100 p-8 md:p-12 rounded-3xl">
@@ -319,7 +319,7 @@
             </div>
         </section>
 
-        <section class="lg:px-32 md:px-16 px-5 py-20 min-h-screen relative hidden pattern-dots pattern-slate-200 pattern-bg-white pattern-size-4 pattern-opacity-100 overflow-hidden" id="research">
+        <section class="lg:px-32 md:px-16 px-5 py-16 lg:py-12 min-h-screen relative hidden pattern-dots pattern-slate-200 pattern-bg-white pattern-size-4 pattern-opacity-100 overflow-hidden" id="research">
             <div class="absolute inset-0 bg-gradient-to-tr from-blue-900 to-amber-400 rounded-full blur-3xl opacity-10 -z-10 mix-blend-multiply w-[600px] h-[600px] top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
             <div class="mx-auto max-w-6xl md:pt-10 pt-0 relative z-10">
                 <h2 class="serif text-3xl font-bold mb-10 text-center text-blue-950">Research Interests</h2>
@@ -403,7 +403,7 @@
             </div>
         </section>
 
-        <section class="lg:px-32 md:px-16 px-5 py-20 min-h-screen relative hidden pattern-dots pattern-slate-200 pattern-bg-white pattern-size-4 pattern-opacity-100 overflow-hidden" id="publications">
+        <section class="lg:px-32 md:px-16 px-5 py-16 lg:py-12 min-h-screen relative hidden pattern-dots pattern-slate-200 pattern-bg-white pattern-size-4 pattern-opacity-100 overflow-hidden" id="publications">
             <div class="absolute inset-0 bg-gradient-to-tr from-blue-900 to-amber-400 rounded-full blur-3xl opacity-10 -z-10 mix-blend-multiply w-[600px] h-[600px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
             <div class="mx-auto max-w-6xl md:pt-10 pt-0 flex flex-col items-center relative z-10">
                 <h2 class="serif text-3xl font-bold mb-10 text-center text-blue-950">Publications</h2>
@@ -423,8 +423,19 @@
                         type="text" placeholder="Search Publications..." />
                 </div>
 
-                <div id="nothing" class="flex-1 w-full flex items-center justify-center py-10">
-                    <p class="text-gray-500 text-center">Nothing here!</p>
+                <div id="nothing" class="w-full py-10">
+                    <div class="w-full max-w-2xl mx-auto rounded-3xl border border-slate-200 bg-white/95 backdrop-blur-md shadow-sm p-8 md:p-10 text-center">
+                        <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-slate-100 text-blue-950 shadow-inner">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-7 w-7">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+                        </div>
+                        <h3 class="serif mt-6 text-2xl font-bold text-blue-950">No publications yet</h3>
+                        <p class="mx-auto mt-3 max-w-lg text-sm md:text-base leading-relaxed text-slate-600">
+                            New publications will appear here once they are published from the connected feed.
+                        </p>
+                    </div>
                 </div>
 
                 <div id="list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-6 w-full">
@@ -432,24 +443,77 @@
             </div>
         </section>
 
-        <section class="lg:px-32 md:px-16 px-5 py-20 min-h-screen relative hidden border-t border-slate-200 pattern-dots pattern-slate-200 pattern-bg-white pattern-size-4 pattern-opacity-100 overflow-hidden"
+        <section class="lg:px-32 md:px-16 px-5 py-10 md:py-12 lg:py-12 min-h-screen relative hidden border-t border-slate-200 pattern-dots pattern-slate-200 pattern-bg-white pattern-size-4 pattern-opacity-100 overflow-hidden"
             id="training">
             <div class="absolute inset-0 bg-gradient-to-tr from-blue-900 to-amber-400 rounded-full blur-3xl opacity-10 -z-10 mix-blend-multiply w-[400px] h-[400px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
-            <div class="mx-auto max-w-4xl md:py-32 py-20 text-center relative z-10">
-                <h2 class="serif text-3xl md:text-4xl font-bold mb-10 text-blue-950">Training & Consultancy</h2>
-                <div
-                    class="space-y-6 text-slate-700 text-lg leading-relaxed bg-slate-50 p-8 rounded-2xl shadow-inner border border-slate-100">
-                    <p>
-                        Training and consultancy in the areas of time series modeling using statistical and machine
-                        learning models for stock prices and climate variables; remote sensing, GIS, and Google Earth
-                        Engine (GEE) applications in agriculture, water resources, and climatology; and agentic
-                        coding/development. Surface water and groundwater modeling are also areas of interest.
+            <div class="mx-auto max-w-6xl md:py-14 py-8 lg:py-12 relative z-10">
+                <div class="text-center mb-8 md:mb-10">
+                    <h2 class="serif text-3xl md:text-4xl font-bold text-blue-950">Training & Consultancy</h2>
+                    <p class="mx-auto mt-4 max-w-3xl text-slate-500 text-sm md:text-lg leading-relaxed">
+                        Practical support in data-driven and process-based problem solving across hydrology, geospatial analysis, and applied machine learning.
                     </p>
+                </div>
+
+                <div class="grid gap-6 lg:grid-cols-12 items-start">
+                    <div class="lg:col-span-7 lg:self-start rounded-3xl border border-slate-200 bg-white/95 backdrop-blur-md shadow-sm p-6 md:p-8">
+                        <div class="flex flex-col sm:flex-row items-start gap-4">
+                            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-950 text-white shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L6 13.25m0 0L9.75 9.5M6 13.25h12.75" />
+                                </svg>
+                            </div>
+                            <div class="w-full">
+                                <div class="flex flex-wrap items-center gap-3">
+                                    <h3 class="serif text-2xl font-bold text-blue-950">What I work on</h3>
+                                    <span class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium tracking-wide text-slate-600">Consulting Focus</span>
+                                </div>
+                                <p class="mt-3 text-slate-700 text-sm md:text-base leading-relaxed">
+                                    Training and consultancy in time series modeling using statistical and machine learning methods for stock prices and climate variables, along with remote sensing, GIS, and Google Earth Engine applications in agriculture, water resources, and climatology. Agentic coding and development support is also available.
+                                </p>
+
+                                <div class="mt-6 grid gap-3 sm:grid-cols-2">
+                                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                                        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Best for</p>
+                                        <p class="mt-2 text-sm text-slate-700 leading-relaxed">Workshops, project guidance, and applied research support.</p>
+                                    </div>
+                                    <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                                        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Approach</p>
+                                        <p class="mt-2 text-sm text-slate-700 leading-relaxed">Practical, hands-on, and focused on real data and real problems.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 lg:self-start rounded-3xl border border-slate-200 bg-white/95 backdrop-blur-md text-slate-800 shadow-sm p-6 md:p-8">
+                        <div class="flex items-center gap-3 justify-center lg:justify-start">
+                            <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-amber-100 text-blue-950 shadow-inner">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.49-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                                </svg>
+                            </div>
+                            <h3 class="serif text-2xl font-bold text-blue-950">Core Areas</h3>
+                        </div>
+                        <div class="mt-6 grid gap-3">
+                            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4 shadow-sm">
+                                <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">01</p>
+                                <p class="mt-2 text-sm md:text-base leading-relaxed text-slate-700">Time series modeling for stock prices and climate variables</p>
+                            </div>
+                            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4 shadow-sm">
+                                <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">02</p>
+                                <p class="mt-2 text-sm md:text-base leading-relaxed text-slate-700">Remote sensing, GIS, and Google Earth Engine workflows</p>
+                            </div>
+                            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4 shadow-sm">
+                                <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">03</p>
+                                <p class="mt-2 text-sm md:text-base leading-relaxed text-slate-700">Surface water, groundwater, and hydrological problem solving</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="lg:px-32 md:px-16 px-5 py-20 min-h-screen relative hidden pattern-dots pattern-slate-200 pattern-bg-white pattern-size-4 pattern-opacity-100 overflow-hidden" id="internships">
+        <section class="lg:px-32 md:px-16 px-5 py-16 lg:py-12 min-h-screen relative hidden pattern-dots pattern-slate-200 pattern-bg-white pattern-size-4 pattern-opacity-100 overflow-hidden" id="internships">
             <div class="absolute inset-0 bg-gradient-to-tr from-blue-900 to-amber-400 rounded-full blur-3xl opacity-10 -z-10 mix-blend-multiply w-[600px] h-[600px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
             <div class="mx-auto max-w-6xl md:pt-10 pt-0 flex flex-col items-center relative z-10">
                 <h2 class="serif text-3xl font-bold mb-10 text-center text-blue-950">Internship Opportunities</h2>
@@ -469,8 +533,19 @@
                         type="text" placeholder="Search Internships..." />
                 </div>
 
-                <div id="nothing" class="flex-1 w-full flex items-center justify-center py-10">
-                    <p class="text-gray-500 text-center">Nothing here!</p>
+                <div id="nothing" class="w-full py-10">
+                    <div class="w-full max-w-2xl mx-auto rounded-3xl border border-slate-200 bg-white/95 backdrop-blur-md shadow-sm p-8 md:p-10 text-center">
+                        <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-slate-100 text-blue-950 shadow-inner">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-7 w-7">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+                        </div>
+                        <h3 class="serif mt-6 text-2xl font-bold text-blue-950">No internships listed</h3>
+                        <p class="mx-auto mt-3 max-w-lg text-sm md:text-base leading-relaxed text-slate-600">
+                            Internship opportunities will show up here when new openings are added.
+                        </p>
+                    </div>
                 </div>
 
                 <div id="list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-6 w-full">
@@ -478,10 +553,63 @@
             </div>
         </section>
 
-        <footer class="bg-slate-900 border-t border-slate-200">
-            <div
-                class="max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-center py-6 px-5 text-slate-300 font-light">
-                &copy; 2024 Dr. Surajit Deb Barma. All rights reserved.
+        <footer class="bg-slate-900 border-t border-slate-700/60">
+            <div class="max-w-7xl mx-auto px-5 lg:px-32 md:px-16 py-12">
+                <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3 text-slate-300">
+                    <div>
+                        <a href="./" class="serif text-2xl font-bold text-white tracking-tight">Dr. Surajit <span class="text-amber-400">Deb Barma</span></a>
+                        <p class="mt-4 text-sm leading-relaxed text-slate-400 max-w-sm">
+                            Teacher and researcher focused on process-based and data-driven hydrological modeling, mentoring, and collaborative research.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-200">Quick Links</h3>
+                        <ul class="mt-4 space-y-3 text-sm">
+                            <li><a href="./?page=about" class="text-slate-400 hover:text-white transition-colors">About</a></li>
+                            <li><a href="./?page=research" class="text-slate-400 hover:text-white transition-colors">Research</a></li>
+                            <li><a href="./?page=publications" class="text-slate-400 hover:text-white transition-colors">Publications</a></li>
+                            <li><a href="./?page=internships" class="text-slate-400 hover:text-white transition-colors">Internships</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-200">Contact</h3>
+                        <div class="mt-4 rounded-2xl border border-slate-700/70 bg-slate-800/60 p-5">
+                            <p class="text-sm text-slate-400 leading-relaxed">
+                                For collaboration, mentoring, or consultancy, reach out directly.
+                            </p>
+                            <div class="mt-5 flex flex-wrap items-center gap-3">
+                                <a href="mailto:surajitdbact@gmail.com" aria-label="Email" class="inline-flex items-center gap-2 rounded-full bg-amber-500 px-4 py-2.5 text-sm font-medium text-white transition-all hover:bg-amber-600 hover:-translate-y-0.5 hover:shadow-lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5H4.5a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-.958 1.846l-7.5 5.25a2.25 2.25 0 0 1-2.584 0l-7.5-5.25A2.25 2.25 0 0 1 2.25 6.993V6.75" />
+                                    </svg>
+                                    Email
+                                </a>
+                                <a href="https://www.linkedin.com/in/surajit-deb-barma-4b1309249/" target="_blank" aria-label="LinkedIn" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-600/80 bg-slate-800/60 text-slate-200 transition-all hover:bg-slate-700 hover:text-white hover:-translate-y-0.5 hover:shadow-lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="h-5 w-5">
+                                        <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.4h.05c.53-1 1.82-2.05 3.75-2.05 4 0 4.74 2.6 4.74 5.98V24h-4V15.05c0-2.13-.04-4.86-2.96-4.86-2.96 0-3.42 2.3-3.42 4.7V24h-4V8z" />
+                                    </svg>
+                                </a>
+                                <a href="https://scholar.google.com/citations?user=F-X8XHkAAAAJ&hl=en&oi=ao" target="_blank" aria-label="Google Scholar" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-600/80 bg-slate-800/60 text-slate-200 transition-all hover:bg-slate-700 hover:text-white hover:-translate-y-0.5 hover:shadow-lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" fill="currentColor" class="h-5 w-5">
+                                        <path d="M240.4 0C152 0 88.7 53.9 88.7 128c0 27.6 10.3 53.3 27.7 74-29.4 23.2-46.5 58.4-46.5 95.5 0 64.6 53.7 117.1 119.9 117.1 42.1 0 79.3-21 101.8-53.3 8.5 1.8 17.5 2.8 26.7 2.8 70.4 0 127.7-56.6 127.7-126.2S388.7 112 318.3 112c-25.7 0-49.6 7.2-69.3 19.5C228.8 83.5 191.3 48 148 48c-25.3 0-49.3 7.9-69.5 21.2C48.7 36.7 142.3 0 240.4 0zm77.9 160c39.3 0 71.3 32 71.3 71.3s-32 71.3-71.3 71.3c-11.9 0-23.2-3-33.2-8.2-1.4-.7-2.6-1.5-3.8-2.4-3.2-2.3-6.2-4.8-9-7.6-2.8-2.8-5.3-5.8-7.6-9-.9-1.2-1.7-2.5-2.4-3.8-5.2-10-8.2-21.3-8.2-33.2 0-39.3 32-71.3 71.3-71.3zM171.3 352c-39.3 0-71.3-32-71.3-71.3s32-71.3 71.3-71.3 71.3 32 71.3 71.3-32 71.3-71.3 71.3z" />
+                                    </svg>
+                                </a>
+                                <a href="https://medium.com/@surajitdb" target="_blank" aria-label="Medium" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-600/80 bg-slate-800/60 text-slate-200 transition-all hover:bg-slate-700 hover:text-white hover:-translate-y-0.5 hover:shadow-lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="h-5 w-5">
+                                        <path d="M2.01 6.68a.72.72 0 0 0-.24-.6L.1 4.11V3.75h6.44l4.97 10.88L16.66 3.75h6.02v.36l-1.74 1.65a.45.45 0 0 0-.17.43v12.84a.45.45 0 0 0 .17.43l1.7 1.65v.36h-8.58v-.36l1.76-1.71c.17-.17.17-.22.17-.43V8.58l-4.9 12.61h-.66L4.57 8.58v8.9c-.05.31.06.62.3.83l2.28 2.75v.36H.03v-.36l2.28-2.75c.23-.21.33-.52.27-.83V6.68z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-10 pt-6 border-t border-slate-700/80 flex flex-col md:flex-row gap-3 md:items-center md:justify-between text-sm text-slate-500">
+                    <p>&copy; 2024 Dr. Surajit Deb Barma. All rights reserved.</p>
+                    <p>Open to research collaboration, mentoring, and consultancy.</p>
+                </div>
             </div>
         </footer>
         <script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

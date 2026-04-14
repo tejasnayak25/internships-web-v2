@@ -154,6 +154,37 @@ document.addEventListener('DOMContentLoaded', () => {
         internships: "./?page=internships"
     };
 
+    const emptyStateConfigs = {
+        publications: {
+            title: "No publications yet",
+            description: "New publications will appear here once they are published from the connected feed.",
+            actionLabel: "Back to Home",
+            actionHref: "./",
+        },
+        internships: {
+            title: "No internships listed",
+            description: "Internship opportunities will show up here when new openings are added.",
+            actionLabel: "Visit Home",
+            actionHref: "./",
+        },
+    };
+
+    const renderEmptyState = (pageName) => {
+        const container = document.querySelector(`#${pageName} #nothing`);
+        if (!container) {
+            return;
+        }
+
+        const config = emptyStateConfigs[pageName];
+        if (!config) {
+            return;
+        }
+
+        container.innerHTML = "";
+        container.classList.remove("hidden");
+        container.append(new EmptyState(config).element);
+    };
+
     if (navLinks.length > 0) {
         navLinks.forEach(link => {
             link.classList.remove("bg-blue-950", "text-white", "border-blue-900", "shadow-sm");
@@ -287,9 +318,12 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(res => res.json())
         .then(data => {
             const list = document.querySelector(`#${page} #list`);
+            const emptyState = document.querySelector(`#${page} #nothing`);
             
             if(data.items && data.items.length > 0) {
-                document.querySelector(`#${page} #nothing`).classList.replace("flex", "hidden");
+                if (emptyState) {
+                    emptyState.classList.add("hidden");
+                }
                 data.items.forEach(post => {
                     const li = new Publication({
                         id: post.guid,
@@ -302,6 +336,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     list.append(li.element);
                 });
+            } else {
+                renderEmptyState(page);
             }
         });
     }
@@ -313,9 +349,12 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(res => res.json())
         .then(data => {
             const list = document.querySelector(`#${page} #list`);
+            const emptyState = document.querySelector(`#${page} #nothing`);
             
             if(data && data.length > 0) {
-                document.querySelector(`#${page} #nothing`).classList.replace("flex", "hidden");
+                if (emptyState) {
+                    emptyState.classList.add("hidden");
+                }
                 data.forEach(post => {
                     const li = new Internship({
                         title: post.title,
@@ -329,9 +368,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     list.append(li.element);
                 });
+            } else {
+                renderEmptyState(page);
             }
         }).catch(err => {
             console.error("Error fetching internships data:", err);
+            renderEmptyState(page);
         });
     }
 });

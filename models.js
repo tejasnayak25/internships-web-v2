@@ -81,3 +81,35 @@ class Internship {
         return div;
     }
 }
+
+class EmptyState {
+    constructor({ title, description, actionLabel = null, actionHref = null, icon = null }) {
+        this.title = title;
+        this.description = description;
+        this.actionLabel = actionLabel;
+        this.actionHref = actionHref;
+        this.icon = icon;
+    }
+
+    get element() {
+        const wrapper = document.createElement("div");
+        wrapper.className = "w-full max-w-2xl mx-auto rounded-3xl border border-slate-200 bg-white/95 backdrop-blur-md shadow-sm p-8 md:p-10 text-center";
+        wrapper.innerHTML = `
+            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-slate-100 text-blue-950 shadow-inner">
+                ${this.icon ?? `
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-7 w-7">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>`}
+            </div>
+            <h3 class="serif mt-6 text-2xl font-bold text-blue-950">${this.title}</h3>
+            <p class="mx-auto mt-3 max-w-lg text-sm md:text-base leading-relaxed text-slate-600">${this.description}</p>
+            ${this.actionLabel && this.actionHref ? `
+                <a href="${this.actionHref}" class="mt-6 inline-flex items-center justify-center rounded-full bg-blue-950 px-6 py-3 text-sm font-medium text-white transition-all hover:bg-blue-900 hover:-translate-y-0.5 hover:shadow-lg">
+                    ${this.actionLabel}
+                </a>
+            ` : ""}
+        `;
+        return wrapper;
+    }
+}

@@ -49,12 +49,12 @@
                         </svg>
                     </button>
                 </li>
-                <li><a href="./" class="block px-4 py-2 rounded-full text-slate-600 hover:text-amber-600 hover:bg-amber-50/50 transition-all">Home</a></li>
-                <li><a href="./?page=about" class="block px-4 py-2 rounded-full text-slate-600 hover:text-amber-600 hover:bg-amber-50/50 transition-all">About</a></li>
-                <li><a href="./?page=research" class="block px-4 py-2 rounded-full text-slate-600 hover:text-amber-600 hover:bg-amber-50/50 transition-all">Research</a></li>
-                <li><a href="./?page=publications" class="block px-4 py-2 rounded-full text-slate-600 hover:text-amber-600 hover:bg-amber-50/50 transition-all">Publications</a></li>
-                <li><a href="./?page=training" class="block px-4 py-2 rounded-full text-slate-600 hover:text-amber-600 hover:bg-amber-50/50 transition-all">Training & Consultancy</a></li>
-                <li><a href="./?page=internships" class="block px-4 py-2 rounded-full text-slate-600 hover:text-amber-600 hover:bg-amber-50/50 transition-all">Internships</a></li>
+                <li><a data-mobile-nav-link href="./" class="block px-4 py-2 rounded-full text-slate-600 hover:text-amber-600 hover:bg-amber-50/50 transition-all">Home</a></li>
+                <li><a data-mobile-nav-link href="./?page=about" class="block px-4 py-2 rounded-full text-slate-600 hover:text-amber-600 hover:bg-amber-50/50 transition-all">About</a></li>
+                <li><a data-mobile-nav-link href="./?page=research" class="block px-4 py-2 rounded-full text-slate-600 hover:text-amber-600 hover:bg-amber-50/50 transition-all">Research</a></li>
+                <li><a data-mobile-nav-link href="./?page=publications" class="block px-4 py-2 rounded-full text-slate-600 hover:text-amber-600 hover:bg-amber-50/50 transition-all">Publications</a></li>
+                <li><a data-mobile-nav-link href="./?page=training" class="block px-4 py-2 rounded-full text-slate-600 hover:text-amber-600 hover:bg-amber-50/50 transition-all">Training & Consultancy</a></li>
+                <li><a data-mobile-nav-link href="./?page=internships" class="block px-4 py-2 rounded-full text-slate-600 hover:text-amber-600 hover:bg-amber-50/50 transition-all">Internships</a></li>
             </ul>
             <button id="toggle-menu" class="lg:hidden p-2 rounded-full bg-slate-100 text-slate-800 hover:bg-slate-200 hover:text-amber-600 focus:outline-none transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -157,9 +157,10 @@
             <div class="absolute inset-0 bg-gradient-to-tr from-blue-900 to-amber-400 rounded-full blur-3xl opacity-10 -z-10 mix-blend-multiply w-[500px] h-[500px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
             <div class="mx-auto max-w-5xl md:pt-10 relative z-10 space-y-12 pb-10">
                 <div class="bg-white/95 backdrop-blur-md shadow-sm border border-slate-100 p-8 md:p-12 rounded-3xl">
-                    <h2 class="serif text-3xl md:text-4xl font-bold mb-8 text-center text-blue-950">About Me</h2>
+                    <h2 class="serif text-3xl md:text-4xl font-bold mb-4 text-center text-blue-950">About Me</h2>
+                    <p class="text-center text-slate-500 mb-8">Teacher, researcher, and mentor in process-based and data-driven hydrological modeling.</p>
                     <div id="about-content"
-                        class="space-y-6 text-slate-700 text-lg leading-relaxed text-justify overflow-hidden max-h-[300px] relative">
+                        class="space-y-6 text-slate-700 text-base md:text-lg leading-relaxed overflow-hidden max-h-[320px] relative">
                         I have several years of teaching and research experience in reputed institutions in India. I love to
                         teach as much as I love to do research. I also love collaborative research in which my ideas and
                         collaborators' ideas are fused to develop a novel concept. Though teaching and research sound
@@ -194,6 +195,7 @@
                         <br>
                         Finally, I am also looking for research collaborators with similar interests.
                     </div>
+                    <div id="about-fade" class="pointer-events-none absolute bottom-[74px] left-8 right-8 h-16 bg-gradient-to-t from-white via-white/80 to-transparent"></div>
                     <div class="mt-8 flex justify-center border-t border-slate-100 pt-8">
                         <button id="read-more-about"
                             class="text-amber-600 font-medium hover:text-amber-800 underline underline-offset-4 decoration-2 transition">Read
@@ -202,15 +204,25 @@
                 </div>
 
                 <!-- Qualification Card -->
-                <div class="bg-white/95 backdrop-blur-md shadow-sm border border-slate-100 p-8 rounded-3xl text-center">
-                    <h2 class="serif text-3xl font-bold mb-4 text-blue-950">Qualification</h2>
-                    <div class="inline-flex items-center gap-3 bg-slate-50 border border-slate-200 rounded-full px-4 md:px-6 py-3 shadow-inner max-w-full">
-                        <span class="bg-blue-100 text-blue-900 p-2 rounded-full hidden md:flex">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.49-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
-                            </svg>
-                        </span>
-                        <p class="text-slate-800 text-base md:text-lg font-medium">PhD in Geoinformatics, National Institute of Technology Karnataka, Surathkal</p>
+                <div class="bg-white/95 backdrop-blur-md shadow-sm border border-slate-100 p-8 md:p-10 rounded-3xl">
+                    <h2 class="serif text-3xl font-bold mb-2 text-center text-blue-950">Qualification</h2>
+                    <p class="text-center text-slate-500 mb-8">Academic foundation and areas of depth</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                            <p class="text-xs tracking-[0.18em] uppercase text-slate-500 mb-2">Degree</p>
+                            <p class="text-lg font-semibold text-blue-950">PhD</p>
+                            <p class="text-slate-700 mt-1">Geoinformatics</p>
+                        </div>
+                        <div class="rounded-2xl border border-slate-200 bg-white p-5">
+                            <p class="text-xs tracking-[0.18em] uppercase text-slate-500 mb-2">Institution</p>
+                            <p class="text-lg font-semibold text-blue-950 leading-snug">National Institute of Technology Karnataka</p>
+                            <p class="text-slate-700 mt-1">Surathkal, India</p>
+                        </div>
+                        <div class="rounded-2xl border border-amber-200 bg-amber-50/60 p-5">
+                            <p class="text-xs tracking-[0.18em] uppercase text-amber-700 mb-2">Focus</p>
+                            <p class="text-lg font-semibold text-amber-900">Hydrology + AI</p>
+                            <p class="text-amber-800 mt-1">Process-based and data-driven models</p>
+                        </div>
                     </div>
                 </div>
 
@@ -272,35 +284,37 @@
                         </a>
                         
                         <div class="flex justify-center items-center gap-5 mt-10">
-                    <a href="" target="_blank"
-                        class="text-white hover:-translate-y-1 transition-all duration-300 bg-blue-950 hover:bg-blue-900 shadow-md rounded-full p-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
-                            <path
-                                d="M12 0.296C5.372 0.296 0 5.669 0 12.296c0 5.286 3.438 9.773 8.207 11.365.6.11.793-.261.793-.577 0-.285-.01-1.04-.016-2.042-3.338.726-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.753-1.333-1.753-1.09-.745.082-.73.082-.73 1.204.085 1.838 1.236 1.838 1.236 1.07 1.833 2.808 1.304 3.492.997.108-.775.42-1.304.763-1.604-2.665-.304-5.466-1.332-5.466-5.932 0-1.31.468-2.382 1.235-3.222-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.495 11.495 0 0 1 3.003-.404c1.02.005 2.047.138 3.003.404 2.29-1.552 3.296-1.23 3.296-1.23.654 1.653.243 2.873.12 3.176.77.84 1.234 1.912 1.234 3.222 0 4.61-2.805 5.625-5.475 5.921.432.372.816 1.104.816 2.223 0 1.606-.015 2.901-.015 3.293 0 .319.19.694.801.576C20.565 22.065 24 17.578 24 12.296 24 5.669 18.627 0.296 12 0.296z" />
-                        </svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/surajit-deb-barma-4b1309249/" target="_blank"
-                        class="text-white hover:-translate-y-1 transition-all duration-300 bg-blue-950 hover:bg-blue-900 shadow-md rounded-full p-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
-                            <path
-                                d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.4h.05c.53-1 1.82-2.05 3.75-2.05 4 0 4.74 2.6 4.74 5.98V24h-4V15.05c0-2.13-.04-4.86-2.96-4.86-2.96 0-3.42 2.3-3.42 4.7V24h-4V8z" />
-                        </svg>
-                    </a>
-                    <a href="https://medium.com/@surajitdb" target="_blank"
-                        class="text-white hover:-translate-y-1 transition-all duration-300 bg-blue-950 hover:bg-blue-900 shadow-md rounded-full p-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
-                            <path
-                                d="M2.01 6.68a.72.72 0 0 0-.24-.6L.1 4.11V3.75h6.44l4.97 10.88L16.66 3.75h6.02v.36l-1.74 1.65a.45.45 0 0 0-.17.43v12.84a.45.45 0 0 0 .17.43l1.7 1.65v.36h-8.58v-.36l1.76-1.71c.17-.17.17-.22.17-.43V8.58l-4.9 12.61h-.66L4.57 8.58v8.9c-.05.31.06.62.3.83l2.28 2.75v.36H.03v-.36l2.28-2.75c.23-.21.33-.52.27-.83V6.68z" />
-                        </svg>
-                    </a>
-                    <a href="https://scholar.google.com/citations?user=F-X8XHkAAAAJ&hl=en&oi=ao" target="_blank"
-                        class="text-white hover:-translate-y-1 transition-all duration-300 bg-blue-950 hover:bg-blue-900 shadow-md rounded-full p-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" fill="currentColor"
-                            class="w-6 h-6">
-                            <path
-                                d="M240.4 0C152 0 88.7 53.9 88.7 128c0 27.6 10.3 53.3 27.7 74-29.4 23.2-46.5 58.4-46.5 95.5 0 64.6 53.7 117.1 119.9 117.1 42.1 0 79.3-21 101.8-53.3 8.5 1.8 17.5 2.8 26.7 2.8 70.4 0 127.7-56.6 127.7-126.2S388.7 112 318.3 112c-25.7 0-49.6 7.2-69.3 19.5C228.8 83.5 191.3 48 148 48c-25.3 0-49.3 7.9-69.5 21.2C48.7 36.7 142.3 0 240.4 0zm77.9 160c39.3 0 71.3 32 71.3 71.3s-32 71.3-71.3 71.3c-11.9 0-23.2-3-33.2-8.2-1.4-.7-2.6-1.5-3.8-2.4-3.2-2.3-6.2-4.8-9-7.6-2.8-2.8-5.3-5.8-7.6-9-.9-1.2-1.7-2.5-2.4-3.8-5.2-10-8.2-21.3-8.2-33.2 0-39.3 32-71.3 71.3-71.3zM171.3 352c-39.3 0-71.3-32-71.3-71.3s32-71.3 71.3-71.3 71.3 32 71.3 71.3-32 71.3-71.3 71.3z" />
-                        </svg>
-                    </a>
+                            <a href="" target="_blank"
+                                class="text-white hover:-translate-y-1 transition-all duration-300 bg-blue-950 hover:bg-blue-900 shadow-md rounded-full p-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 0.296C5.372 0.296 0 5.669 0 12.296c0 5.286 3.438 9.773 8.207 11.365.6.11.793-.261.793-.577 0-.285-.01-1.04-.016-2.042-3.338.726-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.753-1.333-1.753-1.09-.745.082-.73.082-.73 1.204.085 1.838 1.236 1.838 1.236 1.07 1.833 2.808 1.304 3.492.997.108-.775.42-1.304.763-1.604-2.665-.304-5.466-1.332-5.466-5.932 0-1.31.468-2.382 1.235-3.222-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.495 11.495 0 0 1 3.003-.404c1.02.005 2.047.138 3.003.404 2.29-1.552 3.296-1.23 3.296-1.23.654 1.653.243 2.873.12 3.176.77.84 1.234 1.912 1.234 3.222 0 4.61-2.805 5.625-5.475 5.921.432.372.816 1.104.816 2.223 0 1.606-.015 2.901-.015 3.293 0 .319.19.694.801.576C20.565 22.065 24 17.578 24 12.296 24 5.669 18.627 0.296 12 0.296z" />
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/surajit-deb-barma-4b1309249/" target="_blank"
+                                class="text-white hover:-translate-y-1 transition-all duration-300 bg-blue-950 hover:bg-blue-900 shadow-md rounded-full p-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
+                                    <path
+                                        d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.4h.05c.53-1 1.82-2.05 3.75-2.05 4 0 4.74 2.6 4.74 5.98V24h-4V15.05c0-2.13-.04-4.86-2.96-4.86-2.96 0-3.42 2.3-3.42 4.7V24h-4V8z" />
+                                </svg>
+                            </a>
+                            <a href="https://medium.com/@surajitdb" target="_blank"
+                                class="text-white hover:-translate-y-1 transition-all duration-300 bg-blue-950 hover:bg-blue-900 shadow-md rounded-full p-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
+                                    <path
+                                        d="M2.01 6.68a.72.72 0 0 0-.24-.6L.1 4.11V3.75h6.44l4.97 10.88L16.66 3.75h6.02v.36l-1.74 1.65a.45.45 0 0 0-.17.43v12.84a.45.45 0 0 0 .17.43l1.7 1.65v.36h-8.58v-.36l1.76-1.71c.17-.17.17-.22.17-.43V8.58l-4.9 12.61h-.66L4.57 8.58v8.9c-.05.31.06.62.3.83l2.28 2.75v.36H.03v-.36l2.28-2.75c.23-.21.33-.52.27-.83V6.68z" />
+                                </svg>
+                            </a>
+                            <a href="https://scholar.google.com/citations?user=F-X8XHkAAAAJ&hl=en&oi=ao" target="_blank"
+                                class="text-white hover:-translate-y-1 transition-all duration-300 bg-blue-950 hover:bg-blue-900 shadow-md rounded-full p-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" fill="currentColor"
+                                    class="w-6 h-6">
+                                    <path
+                                        d="M240.4 0C152 0 88.7 53.9 88.7 128c0 27.6 10.3 53.3 27.7 74-29.4 23.2-46.5 58.4-46.5 95.5 0 64.6 53.7 117.1 119.9 117.1 42.1 0 79.3-21 101.8-53.3 8.5 1.8 17.5 2.8 26.7 2.8 70.4 0 127.7-56.6 127.7-126.2S388.7 112 318.3 112c-25.7 0-49.6 7.2-69.3 19.5C228.8 83.5 191.3 48 148 48c-25.3 0-49.3 7.9-69.5 21.2C48.7 36.7 142.3 0 240.4 0zm77.9 160c39.3 0 71.3 32 71.3 71.3s-32 71.3-71.3 71.3c-11.9 0-23.2-3-33.2-8.2-1.4-.7-2.6-1.5-3.8-2.4-3.2-2.3-6.2-4.8-9-7.6-2.8-2.8-5.3-5.8-7.6-9-.9-1.2-1.7-2.5-2.4-3.8-5.2-10-8.2-21.3-8.2-33.2 0-39.3 32-71.3 71.3-71.3zM171.3 352c-39.3 0-71.3-32-71.3-71.3s32-71.3 71.3-71.3 71.3 32 71.3 71.3-32 71.3-71.3 71.3z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

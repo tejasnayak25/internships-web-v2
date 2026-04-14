@@ -3,20 +3,47 @@ document.addEventListener('DOMContentLoaded', () => {
     let closeMenu = document.getElementById("close-sidebar");
     let navMenu = document.getElementById("nav-menu");
     let sidebarOverlay = document.getElementById("sidebar-overlay");
+    const mobileNavLinks = document.querySelectorAll("[data-mobile-nav-link]");
 
-    const openSidebar = () => {
-        navMenu.classList.remove("translate-x-full");
+    const isMobile = () => window.matchMedia("(max-width: 1023px)").matches;
+
+    const showOverlay = () => {
+        if (!sidebarOverlay) {
+            return;
+        }
         sidebarOverlay.classList.remove("hidden");
-        setTimeout(() => sidebarOverlay.classList.remove("opacity-0"), 10);
+        requestAnimationFrame(() => sidebarOverlay.classList.remove("opacity-0"));
     };
 
-    const closeSidebarHandler = () => {
-        navMenu.classList.add("translate-x-full");
+    const hideOverlay = () => {
+        if (!sidebarOverlay) {
+            return;
+        }
         sidebarOverlay.classList.add("opacity-0");
         setTimeout(() => sidebarOverlay.classList.add("hidden"), 300);
     };
 
-    toggleMenu.onclick = openSidebar;
+    const openSidebar = () => {
+        if (!navMenu || !isMobile()) {
+            return;
+        }
+        navMenu.classList.remove("translate-x-full");
+        showOverlay();
+        document.body.classList.add("overflow-hidden");
+    };
+
+    const closeSidebarHandler = () => {
+        if (!navMenu) {
+            return;
+        }
+        navMenu.classList.add("translate-x-full");
+        hideOverlay();
+        document.body.classList.remove("overflow-hidden");
+    };
+
+    if (toggleMenu) {
+        toggleMenu.onclick = openSidebar;
+    }
     
     if (closeMenu) {
         closeMenu.onclick = closeSidebarHandler;
@@ -25,6 +52,35 @@ document.addEventListener('DOMContentLoaded', () => {
     if (sidebarOverlay) {
         sidebarOverlay.onclick = closeSidebarHandler;
     }
+
+    if (mobileNavLinks.length > 0) {
+        mobileNavLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                if (isMobile()) {
+                    closeSidebarHandler();
+                }
+            });
+        });
+    }
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            closeSidebarHandler();
+        }
+    });
+
+    window.addEventListener("resize", () => {
+        if (!navMenu) {
+            return;
+        }
+        if (!isMobile()) {
+            hideOverlay();
+            document.body.classList.remove("overflow-hidden");
+            navMenu.classList.remove("translate-x-full");
+        } else {
+            navMenu.classList.add("translate-x-full");
+        }
+    });
 
     let page = "home";
 
@@ -59,14 +115,22 @@ document.addEventListener('DOMContentLoaded', () => {
     if(page === "about") {
         let readMoreBtn = document.getElementById("read-more-about");
         let aboutContent = document.getElementById("about-content");
+        let aboutFade = document.getElementById("about-fade");
 
         readMoreBtn.onclick = () => {
             if(readMoreBtn.innerText === "Read More...") {
                 readMoreBtn.innerText = "Read Less...";
                 aboutContent.classList.remove("max-h-[300px]");
+                aboutContent.classList.remove("max-h-[320px]");
+                if (aboutFade) {
+                    aboutFade.classList.add("hidden");
+                }
             } else {
                 readMoreBtn.innerText = "Read More...";
-                aboutContent.classList.add("max-h-[300px]");
+                aboutContent.classList.add("max-h-[320px]");
+                if (aboutFade) {
+                    aboutFade.classList.remove("hidden");
+                }
             }
         }
     }

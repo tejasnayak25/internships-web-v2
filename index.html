@@ -34,33 +34,33 @@
 
 <body class="relative min-h-full bg-slate-50 text-slate-800">
     <!-- Sidebar Overlay -->
-    <div id="sidebar-overlay" class="fixed inset-0 bg-blue-950/20 backdrop-blur-sm z-40 hidden opacity-0 transition-opacity duration-300"></div>
+    <div id="sidebar-overlay" class="fixed left-0 right-0 bottom-0 bg-blue-950/20 backdrop-blur-sm z-40 hidden opacity-0 transition-opacity duration-300"></div>
 
     <nav
         class="glass lg:px-32 md:px-16 px-5 py-4 sticky w-full top-0 z-50 border-b border-slate-200/60 shadow-sm transition-all text-sm md:text-base">
-        <div class="mx-auto flex justify-between items-center max-w-6xl">
+        <div class="mx-auto w-full max-w-7xl flex justify-between items-center gap-6">
             <a href="./" class="serif text-xl md:text-2xl font-bold text-blue-950 tracking-tight">Dr. Surajit <span class="text-amber-600">Deb Barma</span></a>
             <ul id="nav-menu"
-                class="lg:flex lg:flex-row flex-col lg:relative fixed inset-y-0 right-0 w-64 lg:w-auto h-full lg:h-auto bg-white lg:bg-transparent z-[60] transform translate-x-full lg:translate-x-0 transition-transform duration-300 shadow-2xl lg:shadow-none p-8 lg:p-0 pt-24 lg:pt-0 space-y-4 lg:space-y-0 font-medium lg:items-center lg:space-x-1 border-l lg:border-none border-slate-200">
-                <li class="lg:hidden absolute top-6 right-5">
-                    <button id="close-sidebar" class="p-2 rounded-full bg-slate-100 text-slate-800 hover:bg-slate-200 hover:text-amber-600 focus:outline-none transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
+                class="lg:flex lg:flex-row flex-col lg:static lg:ml-auto fixed right-0 w-[88vw] max-w-sm lg:max-w-none lg:w-auto overflow-y-auto overscroll-contain lg:overflow-visible bg-gradient-to-b from-white to-slate-50 lg:bg-white/85 lg:backdrop-blur-md z-[60] transform translate-x-full lg:translate-x-0 transition-transform duration-300 shadow-2xl lg:shadow-sm ring-1 ring-slate-200/80 lg:ring-slate-200/90 p-6 pb-10 lg:px-2 lg:py-1 pt-8 space-y-2 lg:space-y-0 font-medium lg:items-center lg:space-x-0.5 border-l lg:border border-slate-200 rounded-l-none lg:rounded-full">
+                <li class="lg:hidden px-3 pb-3 mb-2 border-b border-slate-200/80">
+                    <p class="text-xs uppercase tracking-[0.18em] text-slate-500">Menu</p>
+                    <p class="serif text-lg text-blue-950 mt-1">Navigate</p>
                 </li>
-                <li><a data-mobile-nav-link href="./" class="block px-4 py-2 rounded-full text-slate-600 hover:text-amber-600 hover:bg-amber-50/50 transition-all">Home</a></li>
-                <li><a data-mobile-nav-link href="./?page=about" class="block px-4 py-2 rounded-full text-slate-600 hover:text-amber-600 hover:bg-amber-50/50 transition-all">About</a></li>
-                <li><a data-mobile-nav-link href="./?page=research" class="block px-4 py-2 rounded-full text-slate-600 hover:text-amber-600 hover:bg-amber-50/50 transition-all">Research</a></li>
-                <li><a data-mobile-nav-link href="./?page=publications" class="block px-4 py-2 rounded-full text-slate-600 hover:text-amber-600 hover:bg-amber-50/50 transition-all">Publications</a></li>
-                <li><a data-mobile-nav-link href="./?page=training" class="block px-4 py-2 rounded-full text-slate-600 hover:text-amber-600 hover:bg-amber-50/50 transition-all">Training & Consultancy</a></li>
-                <li><a data-mobile-nav-link href="./?page=internships" class="block px-4 py-2 rounded-full text-slate-600 hover:text-amber-600 hover:bg-amber-50/50 transition-all">Internships</a></li>
+                <li><a data-mobile-nav-link href="./" class="nav-link block px-4 lg:px-3 xl:px-4 py-2.5 lg:py-2 rounded-xl lg:rounded-full border border-transparent text-slate-700 lg:text-[0.95rem] hover:text-blue-900 hover:bg-slate-100 hover:border-slate-200 transition-all">Home</a></li>
+                <li><a data-mobile-nav-link href="./?page=about" class="nav-link block px-4 lg:px-3 xl:px-4 py-2.5 lg:py-2 rounded-xl lg:rounded-full border border-transparent text-slate-700 lg:text-[0.95rem] hover:text-blue-900 hover:bg-slate-100 hover:border-slate-200 transition-all">About</a></li>
+                <li><a data-mobile-nav-link href="./?page=research" class="nav-link block px-4 lg:px-3 xl:px-4 py-2.5 lg:py-2 rounded-xl lg:rounded-full border border-transparent text-slate-700 lg:text-[0.95rem] hover:text-blue-900 hover:bg-slate-100 hover:border-slate-200 transition-all">Research</a></li>
+                <li><a data-mobile-nav-link href="./?page=publications" class="nav-link block px-4 lg:px-3 xl:px-4 py-2.5 lg:py-2 rounded-xl lg:rounded-full border border-transparent text-slate-700 lg:text-[0.95rem] hover:text-blue-900 hover:bg-slate-100 hover:border-slate-200 transition-all">Publications</a></li>
+                <li><a data-mobile-nav-link href="./?page=training" class="nav-link block px-4 lg:px-3 xl:px-4 py-2.5 lg:py-2 rounded-xl lg:rounded-full border border-transparent text-slate-700 lg:text-[0.95rem] hover:text-blue-900 hover:bg-slate-100 hover:border-slate-200 transition-all">Training & Consultancy</a></li>
+                <li><a data-mobile-nav-link href="./?page=internships" class="nav-link block px-4 lg:px-3 xl:px-4 py-2.5 lg:py-2 rounded-xl lg:rounded-full border border-transparent text-slate-700 lg:text-[0.95rem] hover:text-blue-900 hover:bg-slate-100 hover:border-slate-200 transition-all">Internships</a></li>
             </ul>
-            <button id="toggle-menu" class="lg:hidden p-2 rounded-full bg-slate-100 text-slate-800 hover:bg-slate-200 hover:text-amber-600 focus:outline-none transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            <button id="toggle-menu" aria-expanded="false" aria-label="Toggle navigation menu" class="lg:hidden p-2 rounded-full bg-slate-100 text-slate-800 hover:bg-slate-200 hover:text-amber-600 focus:outline-none transition-colors">
+                <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 hidden">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
         </div>

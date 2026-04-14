@@ -1,9 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     let toggleMenu = document.getElementById("toggle-menu");
-    let closeMenu = document.getElementById("close-sidebar");
+    let menuIcon = document.getElementById("menu-icon");
+    let closeIcon = document.getElementById("close-icon");
     let navMenu = document.getElementById("nav-menu");
     let sidebarOverlay = document.getElementById("sidebar-overlay");
+    let navBar = document.querySelector("nav");
     const mobileNavLinks = document.querySelectorAll("[data-mobile-nav-link]");
+    const navLinks = document.querySelectorAll("#nav-menu .nav-link");
 
     const isMobile = () => window.matchMedia("(max-width: 1023px)").matches;
 
@@ -23,6 +26,36 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => sidebarOverlay.classList.add("hidden"), 300);
     };
 
+    const applySidebarOffsets = () => {
+        if (!navMenu || !sidebarOverlay) {
+            return;
+        }
+
+        if (!isMobile()) {
+            navMenu.style.top = "";
+            navMenu.style.height = "";
+            sidebarOverlay.style.top = "";
+            return;
+        }
+
+        const headerHeight = navBar ? Math.ceil(navBar.getBoundingClientRect().height) : 72;
+        navMenu.style.top = `${headerHeight}px`;
+        navMenu.style.height = `calc(100dvh - ${headerHeight}px)`;
+        sidebarOverlay.style.top = `${headerHeight}px`;
+    };
+
+    const updateToggleVisual = (isOpen) => {
+        if (toggleMenu) {
+            toggleMenu.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        }
+        if (menuIcon) {
+            menuIcon.classList.toggle("hidden", isOpen);
+        }
+        if (closeIcon) {
+            closeIcon.classList.toggle("hidden", !isOpen);
+        }
+    };
+
     const openSidebar = () => {
         if (!navMenu || !isMobile()) {
             return;
@@ -30,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navMenu.classList.remove("translate-x-full");
         showOverlay();
         document.body.classList.add("overflow-hidden");
+        updateToggleVisual(true);
     };
 
     const closeSidebarHandler = () => {
@@ -39,14 +73,43 @@ document.addEventListener('DOMContentLoaded', () => {
         navMenu.classList.add("translate-x-full");
         hideOverlay();
         document.body.classList.remove("overflow-hidden");
+        updateToggleVisual(false);
+    };
+
+    const syncSidebarState = () => {
+        if (!navMenu) {
+            return;
+        }
+
+        applySidebarOffsets();
+
+        if (isMobile()) {
+            navMenu.classList.add("translate-x-full");
+            hideOverlay();
+            document.body.classList.remove("overflow-hidden");
+            updateToggleVisual(false);
+            return;
+        }
+
+        navMenu.classList.remove("translate-x-full");
+        hideOverlay();
+        document.body.classList.remove("overflow-hidden");
+        updateToggleVisual(false);
     };
 
     if (toggleMenu) {
-        toggleMenu.onclick = openSidebar;
-    }
-    
-    if (closeMenu) {
-        closeMenu.onclick = closeSidebarHandler;
+        toggleMenu.onclick = () => {
+            if (!navMenu || !isMobile()) {
+                return;
+            }
+
+            const isOpen = !navMenu.classList.contains("translate-x-full");
+            if (isOpen) {
+                closeSidebarHandler();
+            } else {
+                openSidebar();
+            }
+        };
     }
     
     if (sidebarOverlay) {
@@ -70,23 +133,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener("resize", () => {
-        if (!navMenu) {
-            return;
-        }
-        if (!isMobile()) {
-            hideOverlay();
-            document.body.classList.remove("overflow-hidden");
-            navMenu.classList.remove("translate-x-full");
-        } else {
-            navMenu.classList.add("translate-x-full");
-        }
+        syncSidebarState();
     });
+
+    syncSidebarState();
 
     let page = "home";
 
     let url = new URL(window.location.href);
     if (url.searchParams.has("page")) {
         page = url.searchParams.get("page");
+    }
+
+    const pageLinkMap = {
+        home: "./",
+        about: "./?page=about",
+        research: "./?page=research",
+        publications: "./?page=publications",
+        training: "./?page=training",
+        internships: "./?page=internships"
+    };
+
+    if (navLinks.length > 0) {
+        navLinks.forEach(link => {
+            link.classList.remove("bg-blue-950", "text-white", "border-blue-900", "shadow-sm");
+
+            if (link.getAttribute("href") === pageLinkMap[page]) {
+                link.classList.add("bg-blue-950", "text-white", "border-blue-900", "shadow-sm");
+            }
+        });
     }
 
     document.getElementById(page).classList.remove("hidden");

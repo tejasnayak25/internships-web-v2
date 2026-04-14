@@ -244,13 +244,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const mediumUsername = "surajitdbact";
 
     if(page === "home") {
-        twttr.widgets.createTimeline(
-        {
-            sourceType: "profile",
-            screenName: "surajitdb",
-        },
-        document.getElementById("x-timeline")
-        );
+        // Skip X timeline widget due to rate limiting - using static fallback instead
+        // Users can click "Follow on X" to see latest updates
 
         const pubs_url = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${mediumUsername}`;
 
